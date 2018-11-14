@@ -12,8 +12,8 @@ class App extends Component {
             Hejsan hoppsan KOMPISAr säger hanna
           </p>
           <a
-            className="App-link"
-            href="https://reactjs.org"
+            className="Tryck INTE på MIG om du är FEG"
+            href="https://www.youtube.com/watch?v=zf_ALHd538M&"
             target="_blank"
             rel="noopener noreferrer"
           >

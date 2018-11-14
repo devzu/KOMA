@@ -1,0 +1,10 @@
+Hejsan svejsan.
+Varför göra ett .docx, när man kan göra ett .txt?
+
+Anyway. Här är Agnes som 14/14 skriver lite thoughts, som kan va bra att ha med i projektet.
+
+----- Agnes 14/14/18
+Skapat react app, via create-react-app i terminalen. Hooked everyone up, och alla använder localhost. Problemet är dock att vi behöver ha en flerpage sida, medan react är mest skapat för single-page. Googling på problemet ger att antingen skapa om från början via redux(????), react router, eller webpack.  Meh. Verkar tråkigt. Provar lägga till react router.
+
+---- Agnes 14/14/18
+Laddat ner react router, följt följande tutorial. https://dev.to/nodefiend/quick-start-guide-for-react-router-v4-using-create-react-app-4h7j 

@@ -13,7 +13,6 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Satan på röven så fort det går!!
-
           </p>
           <a
             className="Tryck INTE på MIG om du är FEG"

@@ -6,10 +6,13 @@ class App extends Component {
   render() {
     return (
       <div className="Soooop">
+        <h1 className="App"> 
+        HEJ LOSERS, I LOVE YOU ALL
+        </h1>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Hej och välkommen till denna sida. Denna sida är du välkommen till. Till just DENNA sida är du välkommen. DU är välkommen till denna sida. Sidan du befinner dig på är du välkommen till.
+            Satan på röven så fort det går!!
           </p>
           <a
             className="Tryck INTE på MIG om du är FEG"

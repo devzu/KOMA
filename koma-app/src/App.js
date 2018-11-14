@@ -11,7 +11,7 @@
     const Startsida = () => (
       <div>
         Sorry baes var tvungen att ta bort det roliga för att va SERRI
-        insert graf 
+        insert graffffff
         och annat viktigt</div>
     )
 // ignorera namnen just nu ok
@@ -35,7 +35,7 @@
 
     const Knapp5 = () => (
       <div>
-        info
+        いしいしいしいしいしいしいしいしいしいしいしいし
       </div>
     )
 

@@ -8,3 +8,6 @@ Skapat react app, via create-react-app i terminalen. Hooked everyone up, och all
 
 ---- Agnes 14/14/18
 Laddat ner react router, följt följande tutorial. https://dev.to/nodefiend/quick-start-guide-for-react-router-v4-using-create-react-app-4h7j 
+
+---- Agnes 14/14/18
+Fick ominstallera npm på hannas dator. Fett weird. Sa något om någon react från hashrouter? 

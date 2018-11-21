@@ -1,0 +1,81 @@
+/***************
+Allmänt
+***************/
+body {
+    background-color: white;
+    font-family: "Helvetica";
+}
+div {
+    outline: 1px dotted black;
+    background-color: white;
+}
+
+/***************
+Välkomstheader
+***************/
+.welcome {
+    margin: 0 0 20px 50px;
+    /*width: 90%;*/
+    text-align: left;
+    color:black;
+}
+
+h1.welcome {
+    margin: 0;
+    color: black;
+    font-size: 64px;
+}
+
+p.welcome {
+    margin: 0;
+    font-size: 30px;  
+}
+
+
+/******************
+Progress overview
+******************/
+* {
+    box-sizing: border-box;
+} /*Vad tusan är detta???*/
+
+.progress_ov {
+    margin: 0 0 0 50px;
+    overflow: auto;
+    width: 70%;
+    height: 500px;
+    padding-bottom: 20px;
+}
+
+
+/********************
+Progress individual
+********************/
+.progress_ind {
+    /*margin: 0 5% 10px;*/
+    /*margin: auto;*/
+    text-align: center;
+    float: left;
+    width: 33.33%;
+}
+
+/********************
+Bar
+********************/
+.bar {
+    margin: auto;
+    height: 300px;
+    width: 100px;
+    background-color: gray;
+}
+
+/********************
+Kalender
+********************/
+.calendar {
+    float: right;
+    width: 25%;
+    max-width: 250px;
+    height: 500px;
+    padding: 10px;
+}

@@ -1,0 +1,210 @@
+
+body {
+	background-color: darkgrey;
+	margin: 0;
+}
+
+ul {
+
+	list-style-type: none;
+	padding-left: 0;
+
+}
+
+
+/************************
+*						*
+*		  Profil  		*
+*						*
+*************************/
+
+.namn {
+
+	text-align: center;
+	color: darkgreen;
+	font-size: 70px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Titan One';
+	text-shadow: 2px 3px black;
+	z-index: -1;
+	cursor: default;
+}
+
+/*
+JS
+Namnet ska kunna gå att ändra av användaren, alltså behövs js kod för det.
+- Max antal bokstäver (tyvärr)
+*/
+
+
+
+.avatar {
+
+	margin: auto;
+	height: 260px;
+	width: 260px;
+	background-color: green;
+	border-radius: 130px;
+}
+
+.avatar:hover {
+
+	cursor: pointer;
+}
+
+
+#leafProfil {
+
+	height: 260px;
+	width: 260px;
+}
+
+#morotProfil {
+
+	height: 260px;
+	width: 260px;
+}
+
+/* 
+JS
+Vi märker här att det blir duplicerad kod, med andra ord behöver det finnas någon kod
+som kan ändra "avatar".
+- Rätt storlek för rätt avatar
+- Rätt färgschema för rätt avatar
+- Rätt bild för rätt avatar
+*/
+
+
+
+.editKnapp {
+
+	float: right;
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+	background-color: darkgreen;
+	margin-top: 220px;
+	margin-right: 10px;
+}
+
+.editKnapp:hover {
+
+	background-color: green;
+	cursor: pointer;
+}
+
+/*
+JS
+Med editknappen ska man kunna ändra avatar och namn. Det ska alltså öppnas
+en div ovanför allt annat, bakgrunden ska bli grumlig.
+- Redigera namn
+- Välja avatar
+	- Färgschema
+	- Profilbild
+*/
+
+#editPenna {
+
+	margin-top: 0px;
+	margin-left: 0px;
+	width: 40px;
+	height: 40px;
+}
+
+
+
+
+/************************
+*						*
+*		 Bakgrund		*
+*						*
+*************************/
+
+/* Sitter bakom allt som en stadig skiva för att hålla allt centrerat*/
+
+.bakgrund {
+
+	margin: auto;
+	/* height: 320px; */
+	width: 800px;
+}
+
+/************************
+*						*
+*		  Meny			*
+*						*
+*************************/
+
+/*
+Vid användande av länk: 
+text-decoration: none; 
+
+Vid använding av lista:
+list-style-type: none;
+*/
+
+.menyKropp {
+
+	height: 505px;
+	width: 80px;
+	margin: 10px;
+	/* margin-left: px; */ /* Var nödvändig när bodys margin inte var 0 */
+	margin-right: 2px;
+	margin-bottom: 25px;
+	background-color: grey;
+	float: left;
+}
+
+.menyKnapp {
+
+	height: 50px;
+	width: 50px;
+	border-radius: 25px;
+	background-color: darkgreen;
+	margin: 15px;
+}
+
+.menyKnapp:hover {
+
+	background-color: green;
+	cursor: pointer;
+
+}
+
+#menyAvgransare {
+
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/************************
+*						*
+*		  Sida			*
+*						*
+*************************/
+
+.sidoKropp {
+
+	height: 505px;
+	width: 696px;
+	margin: 10px;
+	margin-left: 2px;
+	margin-bottom: 25px;
+	float: right;
+	background-color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

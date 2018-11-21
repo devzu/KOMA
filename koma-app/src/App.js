@@ -5,7 +5,7 @@
  import logo from './logo.svg';
  import './App.css';
  import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
+ import HelloWorldText from './b.js';
 // **--DEL TVÅ--**
 // Konstanter-> Våra delar utav sidorna. Dessa "laddar vi in" när vi trycker på dem.
     const Startsida = () => (
@@ -17,7 +17,8 @@
 // ignorera namnen just nu ok
     const Knapp2 = () => (
       <div>
-        KNapp2
+        <HelloWorldText />
+
       </div>
     )
 

@@ -1,6 +1,7 @@
 body
 {
     background-color: #353436;
+    margin: none;
 }
 
 li
@@ -8,31 +9,32 @@ li
     list-style: none;
 }
 
+.container
+{
+    margin: 0vw 0vw 0vw 0vw;
+}
+
 .month
 {
-    margin: 2vw 5vw;
     padding: 1.3vw 13.45vw;
-    text-align: center;
+    
+    text-align: right;
+    font-size: 2vw;
     color: #DFDFDF;
 }
 
 .meny
 {
-    margin: auto;
-    float: left;
     height: 40vw;
-    width: 10vw;
+    width: 7vw;
     background-color: cornflowerblue;
 }
 
 .event
 {
-    margin: auto 2.5vw;
-    float: left;
     height: 40vw;
     width: 25vw;
     border-radius: 0.3vw;
-    
     background-color: darkorange;
 }
 
@@ -40,41 +42,17 @@ li
 {
     height: 17vw;
     width: 25vw;
-    margin: 1vw;
     color: #DFDFDF;
     font-size: 2vw;
 }
 
 .kalender
 {
-    margin: auto 2.5vw;
-    float: left;
     height: 40vw;
-    width: 50vw;
+    width: 51vw;
     
     border-radius: 0.3vw;
-    
     background-color: crimson;
-}
-
-#prev
-{
-    margin: 0.5vw 3.5vw;
-    float: right;
-    font-size: 2vw;
-}
-
-#next
-{
-    margin: 0.5vw 3.5vw;
-    float: right;
-    font-size: 2vw;
-}
-
-#month
-{
-    float: right;
-    font-size: 2.5vw;
 }
 
 #add

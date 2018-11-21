@@ -1,3 +1,31 @@
+
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="Soooop">
+        <h1 className="App"> 
+        HEJ LOSERS, I LOVE YOU ALL
+        </h1>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Hejsan kul dhsjvv
+
+          </p>
+          <a
+            className="Tryck INTE på MIG om du är FEG"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tryck INTE på MIG om du är FEG
+          </a>
+        </header>
+
 // **----- DEL 1 -----**
 //IMPORTERA VIKTIGA SAKER
 
@@ -37,6 +65,7 @@
     const Knapp5 = () => (
       <div>
         いしいしいしいしいしいしいしいしいしいしいしいし
+9f652768c1cd219a1f0519af447d319fbf835046
       </div>
     )
 

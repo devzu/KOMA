@@ -77,3 +77,7 @@ li
     background-color: #353436;
     color: #DFDFDF;
 }
+#noBorder
+{
+    border-style: hidden;
+}

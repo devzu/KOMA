@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Calendar</title>
@@ -8,44 +8,65 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="kalender.css">
 
 </head>
 <body>
     <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-md-9">
-                    <div class="form-inline">
-                        <button id="previous" onclick="previous()"> &#10094; </button> 
-                        &nbsp; &nbsp;
-                        <h3 id="monthAndYear"></h3>
-                        &nbsp; &nbsp;
-                        <button id="next" onclick="next()">&#10095;</button>
+        <div class="row">
+            <div class="col-lg-6 offset-md-9">
+                <div class="form-inline">
+                    <button id="previous" onclick="previous()"> &#10094; </button> 
+                    &nbsp; &nbsp;
+                    <h3 id="monthAndYear"></h3>
+                    &nbsp; &nbsp;
+                    <button id="next" onclick="next()">&#10095;</button>
+                </div>
+            </div>     
+        </div>
+    </div> 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="meny"></div>
+                </div>
+            <div class="col-lg-4">
+                <div class="event">
+                    <div>
+                        <p id="add">Add event +</p>
                     </div>
-                </div>     
+                    <div class="eventBlock">
+                        <p>14 December</p>
+                    </div>
+                    <div class="eventBlock">
+                        <p>Vecka 50</p>
+                    </div>
+                </div>
             </div>
-        </div> 
-<div class="container col-sm-4 col-md-7 col-lg-4 mt-5">
-    <div class="card">
-        <table class="table table-bordered table-responsive-sm" id="calendar">
-            <thead>
-            <tr>
-                <th>Mån</th>
-                <th>Tis</th>
-                <th>Ons</th>
-                <th>Tor</th>
-                <th>Fre</th>
-                <th>Lör</th>
-                <th>Sön</th>
-            </tr>
-            </thead>
-
-            <tbody id="calendar-body">
-
-            </tbody>
-        </table>
-        
+            <div class="col-lg-6">
+                <div class="kalender">
+                    <div class="container py-3">
+                        <div class="row">
+                           <table class="table table-bordered table-responsive-sm" id="calendar">
+                               <thead>
+                                   <tr id="noBorder">
+                                    <th>Mån</th>
+                                    <th>Tis</th>
+                                    <th>Ons</th>
+                                    <th>Tor</th>
+                                    <th>Fre</th>
+                                    <th>Lör</th>
+                                    <th>Sön</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="calendar-body"></tbody>
+                            </table>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 <!--<button name="jump" onclick="jump()">Go</button>-->
 <script src="kalender.js"></script>
 

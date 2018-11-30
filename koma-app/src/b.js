@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 const HelloWorldText = () => ( 
- <div class="containWithStuff">
+ <div className="containWithStuff">
     <div className="welcome">
         <h1 className="welcome">Välkommen <i>Namn</i></h1>
     </div>

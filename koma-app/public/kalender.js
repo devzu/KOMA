@@ -10,10 +10,8 @@ let monthAndYear = document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
 
 
-var d = new Date();
-var datum = d.getDate();
-document.getElementById("day").innerHTML = datum;
-document.getElementById("manad").innerHTML = months[d.getMonth()];
+var m = new Date();
+document.getElementById("manad").innerHTML = months[m.getMonth()];
 
 
 function next() 
@@ -95,7 +93,7 @@ function showCalendar(month, year)
 
 }
 
-
+toDate
 function addEvent()
 {
     var txt;
@@ -118,3 +116,7 @@ function eraseEvent()
     }
    
 }
+
+
+
+

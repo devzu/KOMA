@@ -1,39 +1,41 @@
 
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-class App extends Component {
-  render() {
-    return (
-      <div className="Soooop">
-        <h1 className="App"> 
-        HEJ LOSERS, I LOVE YOU ALL
-        </h1>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Hejsan kul dhsjvv
-
-          </p>
-          <a
-            className="Tryck INTE på MIG om du är FEG"
-            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tryck INTE på MIG om du är FEG
-          </a>
-        </header>
+//import React, { Component } from 'react';
+//import logo from './logo.svg';
+//import './App.css';
+//
+//class App extends Component {
+//  render() {
+//    return (
+//      <div className="Soooop">
+//        <h1 className="App"> 
+//        HEJ LOSERS, I LOVE YOU ALL
+//        </h1>
+//        <header className="App-header">
+//          <img src={logo} className="App-logo" alt="logo" />
+//          <p>
+//            Hejsan kul dhsjvv
+//
+//          </p>
+//          <a
+//            className="Tryck INTE på MIG om du är FEG"
+//            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+//            target="_blank"
+//            rel="noopener noreferrer"
+//          >
+//            Tryck INTE på MIG om du är FEG
+//          </a>
+//        </header>
 
 // **----- DEL 1 -----**
 //IMPORTERA VIKTIGA SAKER
 
  import React, { Component } from 'react';
  import logo from './logo.svg';
+ import 'bootstrap/dist/css/bootstrap.min.css';
  import './App.css';
  import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
  import HelloWorldText from './b.js';
+
 // **--DEL TVÅ--**
 // Konstanter-> Våra delar utav sidorna. Dessa "laddar vi in" när vi trycker på dem.
     const Startsida = () => (
@@ -52,13 +54,13 @@ class App extends Component {
 
     const Knapp3 = () => (
       <div>
-        Knapp3
+        Vet inte vad som ska va här
       </div>
     )
 
     const Knapp4 = () => (
       <div>
-        Knapp4
+        Något ska va här
       </div>
     )
 
@@ -73,19 +75,19 @@ const MainMenu = () => {
   return (
     <div className="navbar">
       <Link to="/">
-        <button className="menubutton">home</button>
+        <button className="menubutton"><span className="glyphicon glyphicon-stats"></span></button>
       </Link>
       <Link to="/knapp2">
-        <button className="menubutton">Knapp2</button>
+        <button className="menubutton"><span className="glyphicon glyphicon-pencil"></span></button>
       </Link>
       <Link to="/knapp3">
-        <button className="menubutton">knapp3</button>
+        <button className="menubutton"><span className="glyphicon glyphicon-calendar"></span></button>
       </Link>
       <Link to="/knapp4">
-        <button className="menubutton">knapp4</button>
+        <button className="menubutton"><span className="glyphicon glyphicon-send"></span></button>
       </Link>
       <Link to="/knapp5">
-        <button className="menubutton">knapp5</button>
+        <button className="menubutton"><span className="glyphicon glyphicon-cog"></span></button>
       </Link>
     </div>
   );

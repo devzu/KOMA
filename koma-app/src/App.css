@@ -1,49 +1,121 @@
-    @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
-    body {
-        font-family: 'Black And White Picture', sans-serif;
-    }
-    .App {
-      text-align: left;
-      font-family: 'Allerta Stencil', sans-serif;
-    }
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
+body {
+    font-family: 'Black And White Picture', sans-serif;
+}
+.App {
+  text-align: left;
+  font-family: 'Allerta Stencil', sans-serif;
+  display:inline-block;
+}
 
-    .App-logo {
-      animation: App-logo-spin infinite 60s linear;
-      height: 9vmin;
-    }
-
-    .menubutton {
-     background-color: palevioletred;
-        display: inline-block;
-    }
+.App-logo {
+    margin: 10px;
+    max-height: 60px;
     
-    .knappar {
+    align-content: center;
+}
+
+    .App-logo:hover {
+      -webkit-animation-name: wiggle;
+      -ms-animation-name: wiggle;
+      -ms-animation-duration: 1000ms;
+      -webkit-animation-duration: 1000ms;
+      -webkit-animation-iteration-count: 1;
+      -ms-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-in-out;
+      -ms-animation-timing-function: ease-in-out;
+    }
+
+    @-webkit-keyframes wiggle {
+      0% {-webkit-transform: rotate(10deg);}
+      25% {-webkit-transform: rotate(-10deg);}
+      50% {-webkit-transform: rotate(20deg);}
+      75% {-webkit-transform: rotate(-5deg);}
+      100% {-webkit-transform: rotate(0deg);}
+    }
+
+    @-ms-keyframes wiggle {
+      0% {-ms-transform: rotate(1deg);}
+      25% {-ms-transform: rotate(-1deg);}
+      50% {-ms-transform: rotate(1.5deg);}
+      75% {-ms-transform: rotate(-5deg);}
+      100% {-ms-transform: rotate(0deg);}
+    }
+
+    @keyframes wiggle {
+      0% {transform: rotate(10deg);}
+      25% {transform: rotate(-10deg);}
+      50% {transform: rotate(20deg);}
+      75% {transform: rotate(-5deg);}
+      100% {transform: rotate(0deg);}
+    }
+
+.menubutton {
+ background-color:#82c3ff;
+-moz-border-radius:28px;
+-webkit-border-radius:28px;
+border-radius:28px;
+border:1px solid #82c3ff;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-family:Arial;
+font-size:17px;
+text-decoration:none;
+text-shadow:0px 1px 0px #649ce0;
+max-width: 13vh;
+    float: left;
+}
+
+    .menuButton:hover{
+    background-color:#649ce0;
+
+    }
+
+    .menuButton:active{
+        position:relative;
+        top:1px;
+    }
+.knappar {
+
+}
+.App-header {
+  background-color: #82c2ff;
+  max-width: 80px;
+    min-width: 80px;
+    min-height: 90vh;
+  display: block;
+    /*
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  float: left;
+
+  font-size: calc(1px + 1vmin);
+  color: black;
+    display: inline-block;
+    margin: 10px;
+}
+
+.App-link {
+  color: green;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.glyphicon {
+    font-size: 50px;
+    margin: 5px;
     
-    }
-    .App-header {
-      background-color: #BADA55;
-      max-width: 13vh;
-    min-height: 100vh;
-      display: block;
-        /*
-      flex-direction: column;
-      align-items: center;
-      justify-content: center; */
-      float: left;
+}
 
-      font-size: calc(1px + 1vmin);
-      color: black;
-    }
+.glyphicon:hover {
+    color:#649ce0;
+}
 
-    .App-link {
-      color: green;
-    }
-
-    @keyframes App-logo-spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }

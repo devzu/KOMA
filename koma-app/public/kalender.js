@@ -4,10 +4,16 @@ let currentYear = today.getFullYear();
 let selectYear = document.getElementById("year");
 let selectMonth = document.getElementById("month");
 
-let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+let months = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
 
 let monthAndYear = document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
+
+
+var d = new Date();
+var datum = d.getDate();
+document.getElementById("day").innerHTML = datum;
+document.getElementById("manad").innerHTML = months[d.getMonth()];
 
 
 function next() 
@@ -74,11 +80,11 @@ function showCalendar(month, year)
                 let cellText = document.createTextNode(date);
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth())
                 {
-                    cell.classList.add("bg-info");
+                    cell.classList.add("idag");
                 } // color today's date
                 cell.appendChild(cellText);
                 row.appendChild(cell);
-                date++;
+                ++date;
             }
 
 
@@ -87,4 +93,28 @@ function showCalendar(month, year)
         tbl.appendChild(row); // appending each row into calendar body.
     }
 
+}
+
+
+function addEvent()
+{
+    var txt;
+    var e = prompt("Event name");
+    if(e == null || e == "")
+    {
+        txt = null;
+    }
+    else
+    {
+        txt = e;
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+function eraseEvent()
+{   
+    if(confirm('Delete event?'))
+    { 
+        document.getElementById("demo").innerHTML = "";  
+    }
+   
 }

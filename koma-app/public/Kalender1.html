@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 offset-md-9">
+            <div class="col-lg-6 offset-md-8">
                 <div class="form-inline">
                     <button id="previous" onclick="previous()"> &#10094; </button> 
                     &nbsp; &nbsp;
@@ -29,14 +29,38 @@
         <div class="row">
             <div class="col-lg-2">
                 <div class="meny"></div>
-                </div>
+            </div>
             <div class="col-lg-4">
                 <div class="event">
-                    <div>
-                        <p id="add">Add event +</p>
-                    </div>
                     <div class="eventBlock">
-                        <p>14 December</p>
+                        <div class="container">
+                             <div class="row">
+                                <div class="col-lg-2">
+                                    <div>
+                                        <p id="day"></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div>
+                                        <p id="manad"></p> 
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-1 offset-md-2">
+                                    <button onClick="addEvent()">+</button>
+                                 </div>
+                                 <div class="col-lg-1 offset-sm-1">
+                                    <button onClick="eraseEvent()">-</button>
+                                 </div>
+                                 
+                                  
+                            </div>
+                           <p id="demo"></p>
+                           <!-- <div id="test">
+                                <div>
+                                    <p> hej</p>
+                                </div>
+                            </div>-->
+                        </div>
                     </div>
                     <div class="eventBlock">
                         <p>Vecka 50</p>
@@ -46,17 +70,19 @@
             <div class="col-lg-6">
                 <div class="kalender">
                     <div class="container py-3">
-                        <div class="row">
-                           <table class="table table-bordered table-responsive-sm" id="calendar">
+                        <div class="row" id="ner">
+                          <table id="T" id="calendar">
+                              
+                             <!-- class="table table-bordered table-responsive-sm"-->
                                <thead>
-                                   <tr id="noBorder">
-                                    <th>Mån</th>
-                                    <th>Tis</th>
-                                    <th>Ons</th>
-                                    <th>Tor</th>
-                                    <th>Fre</th>
-                                    <th>Lör</th>
-                                    <th>Sön</th>
+                                   <tr>
+                                        <th>Mån</th>
+                                        <th>Tis</th>
+                                        <th>Ons</th>
+                                        <th>Tor</th>
+                                        <th>Fre</th>
+                                        <th>Lör</th>
+                                        <th>Sön</th>
                                     </tr>
                                 </thead>
                                 <tbody id="calendar-body"></tbody>

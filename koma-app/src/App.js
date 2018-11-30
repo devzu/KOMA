@@ -74,6 +74,7 @@
 const MainMenu = () => {
   return (
     <div className="navbar">
+      
       <Link to="/">
         <button className="menubutton"><span className="glyphicon glyphicon-stats"></span></button>
       </Link>
@@ -98,6 +99,10 @@ const MainMenu = () => {
         return (
           <Router>
             <div className="App">
+            <div class="ocean">
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
               <header className="App-header">
                 <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
                 <MainMenu />

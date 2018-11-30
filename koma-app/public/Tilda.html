@@ -3,9 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
-		<!-- Tror detta gör så att fönstret inte anpassar sig efte skärmen -->
+		
 		<link href="Tilda.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+		<!-- LOADING-BAR JS OCH CSS -->
+		<link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
+		<script type="text/javascript" src="loading-bar/loading-bar.js"></script>
+		<!-- ---------------------- -->
 
 		<title>Mål-Tider</title>
 	</head>
@@ -39,7 +43,58 @@
 			</div>
 			<!-- ------------------------------------------Sida----------------------------------------- -->
 			<div class="sidoKropp">
-				
+				<!-- --------GRAFEN-------- -->
+				<div class="detailsComponent"> <!-- Osäker på vad det här är -->
+					<div class="graf"> <!-- I grafen finns sen ankan och en stigande bar-->
+						<div class="ankan">
+							
+						</div>
+						<div class="grafBar">
+							
+						</div>
+					</div>
+				</div>
+				<!-- ---------------------- -->
+				<!-- -------Formulär------- -->
+				<div class="goalDetails">
+
+				</div>
+				<!-- ---------------------- -->
+				<!-- --------SKUMT--------- -->
+				<div class="ldBar" data-value="50"></div>
+				<div id="myItem1"></div>
+				<script>
+					var bar1 = new ldBar("#myItem1");
+					var bar2 = document.getElementById('myItem1').ldBar;
+					bar1.set(60);
+				</script>
+				<div
+					class="ldBar label-center"
+					style="width:50%;height:50%;margin:auto"
+					data-value="35"
+					data-preset="circle"
+				></div>
+				<style type="text/css">
+					.ldBar-label {
+						color: red;
+						font-family: tahoma;
+						font-size: 2.lem;
+						font-weight: 900;
+					}
+
+					.ldBar-label:after {
+						content: "% Choklad";
+						color: #aaa;
+						margin-left: 5px;
+						font-family: courier new;
+						font-size: 0.7em;
+						font-weight:200;
+					}
+
+				</style>
+
+				<!-- ---------------------- -->
+
 
 			</div>
 		</div>

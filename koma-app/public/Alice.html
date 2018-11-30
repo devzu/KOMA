@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<link href="style.css" rel ="stylesheet">
-		<link href="script.js" rel ="scripts"
+		<script type="text/javascript" src="script.js"></script>
 		<meta charset="utf-8">
 		<title>Studieteknik</title>
 	</head>
-	<body>
-		<div class="dropdown-content">
-			 <a href="#">Link 1</a>
-   			 <a href="#">Link 2</a>
-    		 <a href="#">Link 3</a>
-  		</div>
-		<div id="menydiv">
-			<img src="burg.png" id="burgmeny" alt="ooo">
+	<body id="body">	
+		<div id="menydiv" onclick="change()">
+			<p class="text">Meny</p>	
+			<div id="meny">
+			</div>
 		</div>
 		<div id="rubrikdiv">
 			<h1 id="rubrik">Studieteknik</h1>
 		</div>
-		<div id=huvuddiv>
-			<div class="divvar" class="dropdown" class="dropbtn">
+			<div class="divvar" class="dropdown" id="dropbtn">
 				<p class="text" class="shadow" >Videor</p>
+				<div class="dropdown-content">
+					<ul>
+						<li><a href="#">Link 1</a></li>
+   			 			<li><a href="#">Link 2</a></li>
+    					<li><a href="#">Link 3</a></li>
+    				 </ul>
+  				</div>
 			</div>
 			<div class="divvar" id="hemdiv"> 
 				<p class="text" class="shadow" >Hemsidor</p>
@@ -31,7 +35,5 @@
 			<div class="divvar" id="appardiv"> 
 				<p class="text">Appar</p>
 			</div>
-		</div>
-		<img src="hej.png" class="gif1" alt="oo" width="500" height="500">
 	</body>
 </html>

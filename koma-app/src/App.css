@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
 body {
     font-family: 'Black And White Picture', sans-serif;
+    overflow: hidden;
 }
 .App {
   text-align: left;
@@ -131,7 +132,7 @@ app { height: 100%; }
 app {
   background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
   overflow: hidden;
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .ocean { 
@@ -151,6 +152,7 @@ app {
   height: 198px;
   animation: wave 30s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
+    overflow: hidden;
     
 }
 

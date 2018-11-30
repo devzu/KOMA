@@ -99,9 +99,9 @@ const MainMenu = () => {
         return (
           <Router>
             <div className="App">
-            <div class="ocean">
-  <div class="wave"></div>
-  <div class="wave"></div>
+            <div className="ocean">
+  <div className="wave"></div>
+  <div className="wave"></div>
 </div>
               <header className="App-header">
                 <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>

@@ -67,7 +67,6 @@
     const Knapp5 = () => (
       <div>
         いしいしいしいしいしいしいしいしいしいしいしいし
-9f652768c1cd219a1f0519af447d319fbf835046
       </div>
     )
 
@@ -76,19 +75,19 @@ const MainMenu = () => {
     <div className="navbar">
       
       <Link to="/">
-        <button className="menubutton"><span className="glyphicon glyphicon-stats"></span></button>
+        <button className="menubutton dissapear"><span className="glyphicon glyphicon-stats dissapear"></span></button>
       </Link>
       <Link to="/knapp2">
-        <button className="menubutton"><span className="glyphicon glyphicon-pencil"></span></button>
+        <button className="menubutton dissapear"><span className="glyphicon glyphicon-pencil dissapear"></span></button>
       </Link>
       <Link to="/knapp3">
-        <button className="menubutton"><span className="glyphicon glyphicon-calendar"></span></button>
+        <button className="menubutton dissapear"><span className="glyphicon glyphicon-calendar dissapear"></span></button>
       </Link>
       <Link to="/knapp4">
-        <button className="menubutton"><span className="glyphicon glyphicon-send"></span></button>
+        <button className="menubutton dissapear"><span className="glyphicon glyphicon-send dissapear"></span></button>
       </Link>
       <Link to="/knapp5">
-        <button className="menubutton"><span className="glyphicon glyphicon-cog"></span></button>
+        <button className="menubutton dissapear"><span className="glyphicon glyphicon-cog dissapear"></span></button>
       </Link>
     </div>
   );

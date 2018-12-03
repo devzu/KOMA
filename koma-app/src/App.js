@@ -34,7 +34,12 @@
  import 'bootstrap/dist/css/bootstrap.min.css';
  import './App.css';
  import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+ import MainPage from './mainpage.js';
+ import CalendarPage from './calendar.js';
+ import ProfilePage from './profile.js';
+ import TipsPage from './tips.js';
  import HelloWorldText from './b.js';
+
 
 // **--DEL TVÅ--**
 // Konstanter-> Våra delar utav sidorna. Dessa "laddar vi in" när vi trycker på dem.

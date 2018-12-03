@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './main.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-const HelloWorldText = () => ( 
+const ProfilePage = () => ( 
  <div className="containWithStuff">
         <div className="mittenBox col-md-6 col-md-offset-3">
 Lorem ipsum dolor sit amet, et scaevola corrumpit nec. Ex modo scripserit definitiones nec. Sint graeco adipiscing duo no, vide singulis et mea. Et justo oblique salutandi vim, mel et zril aperiam tacimates. Cum ea altera discere corpora, solet voluptaria id vim. Vel mutat dolor te, his debitis intellegat.
@@ -19,4 +19,4 @@ Cibo viderer oblique eu mel, magna melius eos eu. Et mea lobortis suscipiantur, 
 
 );
 
-export default HelloWorldText;
+export default ProfilePage;

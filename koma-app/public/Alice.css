@@ -3,6 +3,9 @@
 	color: #676e8d;
 }
 
+#fyll{
+	height: 100vh;
+}
 
 body {
 	background-color: #b7bef3;
@@ -17,7 +20,7 @@ body {
 	border-radius: 7px;
 	display: inline-block;
 	height: 50px;
-	width: 23%;
+	width: 18.5%;
 	float: left;
 	text-align: center;
 	margin-top: 50px;
@@ -40,8 +43,6 @@ body {
 	background-color: #f5afea;
 }
 
-#dropbtn:hover .dropdown-content{display: block}
-
 #menydiv {
 
 	border-radius: 7px;
@@ -52,8 +53,11 @@ body {
 	position: absolute;
 	width: 90px;
 	height: 90px;
+	z-index: 0;
 	opacity: 0;
- 	animation: fade-in-right ease 0.4s forwards;
+ 	animation: fade-in-right ease 0.5s forwards;
+ 	transition-duration: 1s;
+    transition-timing-function: ease;
 
 }
 
@@ -66,26 +70,31 @@ body {
 	cursor: pointer;
 }
 
-.meny{
-	border-radius: 7px;
-	background-color: #fbddf6;
-	text-align: center;
-	position: fixed;
-	width: 90px;
-	height: 400px;
-}
-
-
 
 #hemdiv{
 
 }
 
-.gif1{
- 	transform: scaleX(0);
- 	transform-origin: left;
- 	animation: fade-in-right cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
- 	animation-delay: 1s;
+.menyimg{
+	max-height: 50px;
+	margin-left: -22.5px;
+	margin-top: 20px;
+	display: none;
+	position: absolute;
+	z-index: 2;
+	
+}
+
+#bok{
+	margin-top: 120px;
+}
+
+#profil{
+	margin-top: 220px;
+}
+
+#kalender{
+	margin-top: 320px;
 }
 
 #artikeldiv {
@@ -99,38 +108,40 @@ body {
 #rubrikdiv {
 
 	text-align: center;
-	margin: auto;
-	 transform: scaleX(0);
-  transform-origin: left;
-  animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
-  animation-delay: 0.4s;
+	padding-right: 13%;
+	margin-left: 13%;
+	transform: scaleX(0);
+  	transform-origin: left;
+  	animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  	animation-delay: 0.4s;
 
+}
+
+#dropbtn:hover .dropdown-content{display: block}
+
+#dropbtn{
+	margin-left: 10%;
 }
 
 .dropdown-content{
 	display: none;
 	margin-top: -5px;
-	min-width: #dropbtn.width;
 	min-height: 200px;
 	background-color: #676e8d;
 	border-radius: 7px;
-
+	transform: scaleX(0);
+ 	transform-origin: left;
+ 	animation: fade-in-right cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+ 	animation-delay: 0s;
 }
 
-.dropdown-content a{
-	padding: 12px 16px;
-	display: inline-block;
-	color: white;
-	text-align: center;
-
+.lista p{
+	font-size: 1.5em;
+	margin-top: -3%;
+	padding-top: -3%;
 }
 
-ul {
-	list-style-type: none;
-	text-align: center;
-}
-
-li:hover{
+.lista:hover{
 	background-color: blue;
 }
 

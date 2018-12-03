@@ -5,7 +5,7 @@ body {
 }
 .App {
   text-align: left;
-  font-family: 'Allerta Stencil', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
   display:inline-block;
     overflow: hidden;
     max-width: 100%;
@@ -55,11 +55,11 @@ body {
     }
 
 .menubutton {
- background-color:#82c3ff;
+ background-color:#cfe2f3;
 -moz-border-radius:28px;
 -webkit-border-radius:28px;
 border-radius:28px;
-border:1px solid #82c3ff;
+border:0px solid #82c3ff;
 display:inline-block;
 cursor:pointer;
 color:#ffffff;
@@ -72,7 +72,7 @@ max-width: 13vh;
 }
 
     .menuButton:hover{
-    background-color:#649ce0;
+    background-color:#cfe2f3;
 
     }
 
@@ -84,7 +84,7 @@ max-width: 13vh;
 
 }
 .App-header {
-  background-color: #82c2ff;
+  background-color: #cfe2f3;
   max-width: 80px;
     min-width: 80px;
     min-height: 90vh;
@@ -124,7 +124,7 @@ border: 0px solid #000000;
 }
 
 .glyphicon:hover {
-    color:#649ce0;
+    color:#cfe2f3;
 }
 
 
@@ -141,7 +141,7 @@ app {
   position:absolute;
   bottom:0;
   left:0;
-  background: #82c2ff;
+  background: #A9D0F2;
 }
 
 .wave {

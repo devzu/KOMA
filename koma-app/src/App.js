@@ -73,6 +73,7 @@
 
 const MainMenu = () => {
   return (
+    
     <div className="navbar">
       
       <Link to="/">
@@ -100,9 +101,8 @@ const MainMenu = () => {
       {
         return (
             <Router>
+              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
               <div className="App">
-              
-              
 
                 <header className="App-header">
                   <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>

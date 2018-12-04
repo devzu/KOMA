@@ -94,30 +94,33 @@ const MainMenu = () => {
   );
 };
 
-    class App extends Component {
-      render() {
+    class App extends Component 
+    {
+      render() 
+      {
         return (
-          <Router>
-            <div className="App">
-            
-  <div className="wave"></div>
-  <div className="wave"></div>
-</div>
-              <header className="App-header">
-                <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
-                <MainMenu />
-              </header>
-              <div className="knappar">
-                 <Route exact path="/" component={Startsida} />
-            <Route exact path="/knapp2" component={Knapp2} />
-            <Route exact path="/knapp3" component={Knapp3} />
-            <Route exact path="/knapp4" component={Knapp4} />
-            <Route exact path="/knapp5" component={Knapp5} />
-            <div className="app-wave"><div className="ocean">
-        
+            <Router>
+              <div className="App">
+              
+              
+
+                <header className="App-header">
+                  <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
+                  <MainMenu />
+                </header>
+                <div className="knappar">
+                  <Route exact path="/" component={Startsida} />
+              <Route exact path="/knapp2" component={Knapp2} />
+              <Route exact path="/knapp3" component={Knapp3} />
+              <Route exact path="/knapp4" component={Knapp4} />
+              <Route exact path="/knapp5" component={Knapp5} />
+              <div className="app-wave"><div className="ocean">
+              <div className="wave"></div>
+              <div className="wave"></div>
+                </div>
               </div>
-            </div>
-          </Router>
+              </div> </div>
+            </Router>
         );
       }
     }

@@ -3,8 +3,9 @@ import './main.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const CalendarPage = () => ( 
- <div className="containWithStuff">
-        <div className="mittenBox col-md-6 col-md-offset-3">
+ <div className="content-box">
+ <h1 className="page-title">Kalendar</h1>
+        <div className="mittenBox">
 Lorem ipsum dolor sit amet, et scaevola corrumpit nec. Ex modo scripserit definitiones nec. Sint graeco adipiscing duo no, vide singulis et mea. Et justo oblique salutandi vim, mel et zril aperiam tacimates. Cum ea altera discere corpora, solet voluptaria id vim. Vel mutat dolor te, his debitis intellegat.
 
 Delectus sententiae ius eu, fugit scaevola placerat no mea. Vis delicata maluisset et, no quo nihil dolorem noluisse. Et etiam sanctus mel, vis elit persecuti elaboraret, harum audire fabulas eam ne. Nullam dictas sed ne.

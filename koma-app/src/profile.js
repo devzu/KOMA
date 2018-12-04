@@ -2,21 +2,102 @@ import React, { Component } from 'react';
 import './main.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-const ProfilePage = () => ( 
- <div className="containWithStuff">
-        <div className="mittenBox col-md-6 col-md-offset-3">
-Lorem ipsum dolor sit amet, et scaevola corrumpit nec. Ex modo scripserit definitiones nec. Sint graeco adipiscing duo no, vide singulis et mea. Et justo oblique salutandi vim, mel et zril aperiam tacimates. Cum ea altera discere corpora, solet voluptaria id vim. Vel mutat dolor te, his debitis intellegat.
 
-Delectus sententiae ius eu, fugit scaevola placerat no mea. Vis delicata maluisset et, no quo nihil dolorem noluisse. Et etiam sanctus mel, vis elit persecuti elaboraret, harum audire fabulas eam ne. Nullam dictas sed ne.
+// POP-UP-klassen
+class Popup extends React.Component {
+  
+    state = {
+        counter: 0,
+        goalFields: []
+    };
 
-Vis verterem recteque percipitur ex. Ignota docendi sea eu, an volumus delicata nec, idque pericula vix an. Congue equidem eu sit. Tractatos argumentum sed id.
+    createField() {
+        
+    }
+    
+    // Arrow function
+    addGoal = () => {
+        this.setState({ 
+            counter: this.state.counter +  1 
+        });
+        
+    } 
+    
+    render() {
+        
+         let classes = 
+            (this.state.counter === 0) ?
+           "orange" : "lightblue";
+ 
+        return (
+          <div className='popup'>
+            <div className='popup_inner'>
 
-Ad timeam nostrud est, sale mutat denique et vel. Has ut reprimique scripserit, quo ei dicant platonem eloquentiam, eos no vide commodo cotidieque. Clita corpora pro cu. Eloquentiam repudiandae mel ut. Summo officiis vulputate at has.
+                <h1>{this.props.text}</h1>
 
-Cibo viderer oblique eu mel, magna melius eos eu. Et mea lobortis suscipiantur, ignota consequat conceptam sit ei. Vidit omnes his et. Cu ferri euismod corpora cum. </div>
-   
-</div>
+                <button onClick={this.addGoal}>
+                Lägg till nytt delmål
+                </button>
+                
+                {/* tag.id om man vill ha ett objekt (!!!) */}
+                {this.state.goalFields.map(tag => 
+                <textarea key={tag} >{ "Skriv ngt" }</textarea>)}
+                
+                <h5>
+                    Antal mål: {this.state.counter}
+                </h5>
 
-);
+                <button onClick={this.props.closePopup}>KLAR</button>
+            
+            </div>
+          </div>
+
+        );
+  }
+ 
+
+}
+
+
+class ProfilePage extends React.Component {
+    
+  constructor() {
+    super();
+    this.state = {
+      showPopup: false
+    };
+  }
+    
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
+    
+  render() {
+    return (
+      <div>
+        
+        <h1>Välkommen</h1>
+        
+        <button onClick={this.togglePopup.bind(this)}>
+            Nytt mål
+        </button>
+        
+        {/* Se detta som en if-sats:
+        // om showPopup == true, gör det som syns: 
+        // Annars, gör ingenting (null)*/}
+        {this.state.showPopup ? 
+          <Popup
+            text='Skapa ett nytt mål'
+            closePopup={this.togglePopup.bind(this)} 
+          />
+          : null
+        }
+
+      </div>
+    );
+  }
+};
 
 export default ProfilePage;

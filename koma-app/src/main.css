@@ -1,5 +1,6 @@
 .mittenBox {
     margin:auto;
+    display: flex;
     width: 800px;
     height: 90vh;
     background-color: #cfe2f3;

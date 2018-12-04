@@ -30,7 +30,7 @@
 //IMPORTERA VIKTIGA SAKER
 
  import React, { Component } from 'react';
- import logo from './logo.svg';
+ import logo from './image/logo.svg';
  import 'bootstrap/dist/css/bootstrap.min.css';
  import './App.css';
  import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
@@ -44,34 +44,30 @@
 // **--DEL TVÅ--**
 // Konstanter-> Våra delar utav sidorna. Dessa "laddar vi in" när vi trycker på dem.
     const Startsida = () => (
-      <div>
-        Sorry baes var tvungen att ta bort det roliga för att va SERRI
-        insert graffffff
-        och annat viktigt</div>
+      <div> hhhhh
+        <HelloWorldText />
+</div>
     )
 // ignorera namnen just nu ok
     const Knapp2 = () => (
       <div>
-        <HelloWorldText />
-
+        <MainPage/>
       </div>
     )
 
     const Knapp3 = () => (
-      <div>
-        Vet inte vad som ska va här
-      </div>
+      <CalendarPage/>
     )
 
     const Knapp4 = () => (
       <div>
-        Något ska va här
+        <ProfilePage/>
       </div>
     )
 
     const Knapp5 = () => (
       <div>
-        いしいしいしいしいしいしいしいしいしいしいしいし
+       <TipsPage/>
       </div>
     )
 
@@ -103,7 +99,7 @@ const MainMenu = () => {
         return (
           <Router>
             <div className="App">
-            <div className="ocean">
+            
   <div className="wave"></div>
   <div className="wave"></div>
 </div>
@@ -117,6 +113,8 @@ const MainMenu = () => {
             <Route exact path="/knapp3" component={Knapp3} />
             <Route exact path="/knapp4" component={Knapp4} />
             <Route exact path="/knapp5" component={Knapp5} />
+            <div className="app-wave"><div className="ocean">
+        
               </div>
             </div>
           </Router>

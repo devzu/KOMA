@@ -6,7 +6,7 @@ const ProfilePage = () => (
 <div className="containWithStuff">
     <div className="mittenBox col-md-6 col-md-offset-3">
     
-    <App/>
+    <ProfilePageContent/>
     
     </div> 
    
@@ -94,7 +94,7 @@ class Popup extends React.Component{
 }
 
 
-class App extends React.Component {
+class ProfilePageContent extends React.Component {
     
   constructor() {
     super();

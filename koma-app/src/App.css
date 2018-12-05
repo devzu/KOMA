@@ -3,18 +3,28 @@
 body {
     font-family: 'Black And White Picture', sans-serif;
     overflow: hidden;
+    color: black;
 }
 
 
 /* APP STUFF CSS MAIN */
 .App {
   text-align: left;
+<<<<<<< HEAD
 font-family: 'Didact Gothic', sans-serif;
   display: absolute;
+=======
+    font-family: 'Didact Gothic', sans-serif;
+  display:inline-block;
+>>>>>>> 8ceb12a1c5b7b2a06339889887ba3fd758e4863c
     overflow: hidden;
     max-width: 100%;
     margin: auto;
     
+}
+
+#Hanna_knapp {
+    background-color: blue;
 }
 
 .App-logo {

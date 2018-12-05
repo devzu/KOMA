@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
+.App {
+    font-family: 'Didact Gothic', sans-serif;
+
+}
+.page-title{
+    font-family: 'Didact Gothic', sans-serif;
+            }
+.mittenBox {
+    margin:0px 100px;
+    display: absolute;
+    width: 800px;
+    height: 50vh;
+    background-color: #cfe2f3;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0.2;
+    z-index: -999;
+
+}
+
+.content-box{
+    text-align: center;
+}

@@ -1,6 +1,6 @@
 
 body {
-	background-color: darkgrey;
+	background-color: white;
 	margin: 0;
 }
 
@@ -21,7 +21,7 @@ ul {
 .namn {
 
 	text-align: center;
-	color: darkgreen;
+	color: darkblue;
 	font-size: 70px;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -44,7 +44,7 @@ Namnet ska kunna gå att ändra av användaren, alltså behövs js kod för det.
 	margin: auto;
 	height: 260px;
 	width: 260px;
-	background-color: green;
+	background-color: lightblue;
 	border-radius: 130px;
 }
 
@@ -83,14 +83,14 @@ som kan ändra "avatar".
 	height: 40px;
 	width: 40px;
 	border-radius: 20px;
-	background-color: darkgreen;
+	background-color: darkblue;
 	margin-top: 220px;
 	margin-right: 10px;
 }
 
 .editKnapp:hover {
 
-	background-color: green;
+	background-color: blue;
 	cursor: pointer;
 }
 
@@ -152,7 +152,7 @@ list-style-type: none;
 	/* margin-left: px; */ /* Var nödvändig när bodys margin inte var 0 */
 	margin-right: 2px;
 	margin-bottom: 25px;
-	background-color: grey;
+	background-color: lightblue;
 	float: left;
 }
 
@@ -161,13 +161,13 @@ list-style-type: none;
 	height: 50px;
 	width: 50px;
 	border-radius: 25px;
-	background-color: darkgreen;
+	background-color: darkblue;
 	margin: 15px;
 }
 
 .menyKnapp:hover {
 
-	background-color: green;
+	background-color: blue;
 	cursor: pointer;
 
 }
@@ -186,14 +186,89 @@ list-style-type: none;
 
 .sidoKropp {
 
-	height: 505px;
-	width: 696px;
+	height: 305px;
+	width: 496px;
 	margin: 10px;
 	margin-left: 2px;
 	margin-bottom: 25px;
 	float: right;
-	background-color: grey;
+	background-color: lightblue;
+	padding: 100px;
 }
+/* Behövs inte
+.struktur {
+
+
+
+}
+*/
+/************
+*			*
+*	Graf    *
+*			*
+************/
+
+.graf {
+
+	position: relative;
+	/* position: relative; */ /* Fanns med i lab2 koden */
+	background-color: white;
+	width: 100px;
+	height: 305px;
+	border-radius: 10px;
+	box-shadow: 5px 4px 10px rgba(0,0,0,0.15);
+	
+}
+
+.graf:hover { /* Få grafen att sticka fram lite */
+
+	box-shadow: 8px 6px 10px rgba(0,0,0,0.15);
+
+}
+
+.grafBar {
+
+	position: absolute; /* Tror den aldrig flyytar sig även om den blir större */
+	bottom: 5px; /* bottom och left ger oss positionen i mitten av graf */
+	left: 5px;
+	width: 90px;
+	height: 100px; /* Denna ska vara sjusterbar enl. delmål och mål */
+	border-radius: 3px 3px 6px 6px;
+	background-color: #68b4d3;
+
+	/* transition-property: ; */
+	transition-duration: 2.0s;
+}
+
+/************
+*			*
+* Formulär  *
+*			*
+************/
+
+.grafDetails {
+
+	width: 400px;
+	height: 305px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

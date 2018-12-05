@@ -1,49 +1,188 @@
-    @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
-    body {
-        font-family: 'Black And White Picture', sans-serif;
-    }
-    .App {
-      text-align: left;
-      font-family: 'Allerta Stencil', sans-serif;
-    }
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
+body {
+    font-family: 'Black And White Picture', sans-serif;
+    overflow: hidden;
+}
 
-    .App-logo {
-      animation: App-logo-spin infinite 60s linear;
-      height: 9vmin;
-    }
 
-    .menubutton {
-     background-color: palevioletred;
-        display: inline-block;
-    }
+/* APP STUFF CSS MAIN */
+.App {
+  text-align: left;
+font-family: 'Didact Gothic', sans-serif;
+  display:inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
     
-    .knappar {
+}
+
+.App-logo {
+    margin: 10px;
+    max-height: 60px;
     
-    }
-    .App-header {
-      background-color: #BADA55;
-      max-width: 13vh;
-    min-height: 100vh;
-      display: block;
-        /*
-      flex-direction: column;
-      align-items: center;
-      justify-content: center; */
-      float: left;
+    align-content: center;
+}
 
-      font-size: calc(1px + 1vmin);
-      color: black;
+    .App-logo:hover {
+      -webkit-animation-name: wiggle;
+      -ms-animation-name: wiggle;
+      -ms-animation-duration: 1000ms;
+      -webkit-animation-duration: 1000ms;
+      -webkit-animation-iteration-count: 1;
+      -ms-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-in-out;
+      -ms-animation-timing-function: ease-in-out;
     }
 
-    .App-link {
-      color: green;
+    @-webkit-keyframes wiggle {
+      0% {-webkit-transform: rotate(10deg);}
+      25% {-webkit-transform: rotate(-10deg);}
+      50% {-webkit-transform: rotate(20deg);}
+      75% {-webkit-transform: rotate(-5deg);}
+      100% {-webkit-transform: rotate(0deg);}
     }
 
-    @keyframes App-logo-spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
+    @-ms-keyframes wiggle {
+      0% {-ms-transform: rotate(1deg);}
+      25% {-ms-transform: rotate(-1deg);}
+      50% {-ms-transform: rotate(1.5deg);}
+      75% {-ms-transform: rotate(-5deg);}
+      100% {-ms-transform: rotate(0deg);}
     }
+
+    @keyframes wiggle {
+      0% {transform: rotate(10deg);}
+      25% {transform: rotate(-10deg);}
+      50% {transform: rotate(20deg);}
+      75% {transform: rotate(-5deg);}
+      100% {transform: rotate(0deg);}
+    }
+
+.menubutton {
+ background-color:#cfe2f3;
+-moz-border-radius:28px;
+-webkit-border-radius:28px;
+border-radius:28px;
+border:0px solid #82c3ff;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-family:Arial;
+font-size:17px;
+text-decoration:none;
+text-shadow:0px 1px 0px #649ce0;
+max-width: 13vh;
+    float: left;
+}
+
+    .menuButton:hover{
+    background-color:#cfe2f3;
+
+    }
+
+    .menuButton:active{
+        position:relative;
+        top:1px;
+    }
+.knappar {
+
+}
+.App-header {
+  background-color: #cfe2f3;
+  max-width: 80px;
+    min-width: 80px;
+    min-height: 90vh;
+  display: block;
+    /*
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  float: left;
+
+  font-size: calc(1px + 1vmin);
+  color: black;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
+}
+
+.App-link {
+  color: green;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.glyphicon {
+    font-size: 50px;
+    margin: 5px;
+    
+}
+
+.glyphicon:hover {
+    color:#cfe2f3;
+}
+
+/* APP ANIMATION OCEAN WAVE */
+app-wave { height: 100%; }
+app-wave {
+  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #A9D0F2;
+}
+
+.wave {
+  background: url("image/wave.svg") repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 30s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+    overflow: hidden;
+    
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 25s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+
+
+/* PAGES LOL 1 HEJ I DONT KNOW */

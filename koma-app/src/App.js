@@ -101,14 +101,13 @@ const MainMenu = () => {
       {
         return (
             <Router>
-              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
+              <div className="wtf">
               <div className="App">
-
                 <header className="App-header">
                   <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
                   <MainMenu />
                 </header>
-                <div className="knappar">
+                <div className="ContentanAvTentan">
                   <Route exact path="/" component={Startsida} />
               <Route exact path="/knapp2" component={Knapp2} />
               <Route exact path="/knapp3" component={Knapp3} />
@@ -119,7 +118,7 @@ const MainMenu = () => {
               <div className="wave"></div>
                 </div>
               </div>
-              </div> </div>
+              </div> </div></div>
             </Router>
         );
       }

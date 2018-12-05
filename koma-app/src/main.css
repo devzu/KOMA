@@ -5,19 +5,28 @@
 }
 .page-title{
     font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
             }
 .mittenBox {
-    margin:0px 100px;
     display: absolute;
-    width: 800px;
-    height: 50vh;
-    background-color: #cfe2f3;
+    background-color:rgba(207, 226, 243, 0.4);
     border-radius: 10px 10px 10px 10px;
-    opacity: 0.2;
+    padding: 10px;
     z-index: -999;
 
 }
-
+.containerBox{
+}
 .content-box{
     text-align: center;
+}
+
+.studieBar {
+    display: inline-grid;
+    background-color: 5ada55;
+    padding: 5px;
+}
+
+.studieBarCol{
+    display: grid;
 }

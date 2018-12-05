@@ -1,3 +1,4 @@
+/* APP.CSS is only for the APP-SHELL, not for the seperate pages imported into the app.*/
 @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
 body {
     font-family: 'Black And White Picture', sans-serif;
@@ -9,7 +10,7 @@ body {
 .App {
   text-align: left;
 font-family: 'Didact Gothic', sans-serif;
-  display:inline-block;
+  display: absolute;
     overflow: hidden;
     max-width: 100%;
     margin: auto;
@@ -84,7 +85,11 @@ max-width: 13vh;
         position:relative;
         top:1px;
     }
-.knappar {
+.ContentanAvTentan {
+
+  display: grid;
+  margin-top: 30px;
+  padding: 5px;
 
 }
 .App-header {

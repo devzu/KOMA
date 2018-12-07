@@ -1,6 +1,7 @@
 body
 {
     background-color: #353436;
+    margin: none;
 }
 
 li
@@ -8,73 +9,67 @@ li
     list-style: none;
 }
 
+th
+{
+    height: 2vw;
+    padding: 2vw;
+}
+td
+{
+    padding: 1.8vw 2.9vw;
+}
+
+.container
+{
+    margin: 0vw 0vw 0vw 0vw;
+}
+
+{
+    margin: 0vw 0vw 0vw 0vw;
+}
+
+.idag
+{
+    background-color: crimson;
+}
+
+
 .month
 {
-    margin: 2vw 5vw;
     padding: 1.3vw 13.45vw;
-    text-align: center;
+    
+    text-align: right;
+    font-size: 2vw;
     color: #DFDFDF;
 }
 
 .meny
 {
-    margin: auto;
-    float: left;
     height: 40vw;
-    width: 10vw;
-    background-color: cornflowerblue;
+    width: 7vw;
+    background-color: #B4B4B4;
 }
 
 .event
 {
-    margin: auto 2.5vw;
-    float: left;
     height: 40vw;
     width: 25vw;
     border-radius: 0.3vw;
-    
-    background-color: darkorange;
-}
-
-.eventBlock
-{
-    height: 17vw;
-    width: 25vw;
-    margin: 1vw;
-    color: #DFDFDF;
-    font-size: 2vw;
+    background-color: #DBAE58;
 }
 
 .kalender
 {
-    margin: auto 2.5vw;
-    float: left;
     height: 40vw;
-    width: 50vw;
+    width: 51vw;
     
     border-radius: 0.3vw;
-    
-    background-color: crimson;
+    background-color: antiquewhite;
 }
 
-#prev
+.numb_center
 {
-    margin: 0.5vw 3.5vw;
-    float: right;
-    font-size: 2vw;
-}
-
-#next
-{
-    margin: 0.5vw 3.5vw;
-    float: right;
-    font-size: 2vw;
-}
-
-#month
-{
-    float: right;
-    font-size: 2.5vw;
+    text-align: center;
 }
 
 #add
@@ -88,4 +83,12 @@ li
     text-align: center;
     background-color: #353436;
     color: #DFDFDF;
+}
+#ner
+{
+    margin-top: 2vw;
+}
+#T
+{
+    width: 100%;
 }

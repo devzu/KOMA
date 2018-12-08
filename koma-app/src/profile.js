@@ -2,52 +2,87 @@ import React, { Component } from 'react';
 import './main.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+const ProfilePage = () => ( 
+<div className="containWithStuff">
+    <div className="mittenBox col-md-6 col-md-offset-3">
+    
+    <ProfilePageContent/>
+    
+    </div> 
+   
+</div>
 
-// POP-UP-klassen
-class Popup extends React.Component {
-  
+);
+
+class Popup extends React.Component{
+    
+    // Initial states of Popup:
+    // Nollan counter, inga textfält (goalFields)
     state = {
         counter: 0,
+        enableButton: true,
         goalFields: []
     };
-
+    
+    // Skapar textfält
     createField() {
         
+        const item = this.state.goalFields;
+        
+        // Detta är tydligen viktigt?
+        item.push({});
+        
+        this.setState({goalFields: item});
     }
     
     // Arrow function
     addGoal = () => {
+        // Plussa på countern
         this.setState({ 
-            counter: this.state.counter +  1 
+            counter: this.state.counter +  1,
+            enableButton: false
         });
+        // Kalla på createField
+        this.createField(this);
         
     } 
     
     render() {
-        
-         let classes = 
-            (this.state.counter === 0) ?
-           "orange" : "lightblue";
- 
+    {/**/}
         return (
           <div className='popup'>
             <div className='popup_inner'>
 
-                <h1>{this.props.text}</h1>
+                <h1>Skapa ett nytt mål</h1>
 
                 <button onClick={this.addGoal}>
                 Lägg till nytt delmål
                 </button>
+
+                {/* Denna kan kortas ned, men hur? 
+                {this.state.goalFields.map((item, index) => {
+                  return (
+                    <div className="box" key={index}>
+                        <div>
+                       </div>
+                    </div>
+                  )
+                })} 
+                */}
                 
-                {/* tag.id om man vill ha ett objekt (!!!) */}
+                
                 {this.state.goalFields.map(tag => 
-                <textarea key={tag} >{ "Skriv ngt" }</textarea>)}
+                    <textarea key={this.state.counter} placeholder={ "Namn på mål: " + this.state.counter}></textarea>
+                    
+                )}
                 
                 <h5>
                     Antal mål: {this.state.counter}
                 </h5>
 
-                <button onClick={this.props.closePopup}>KLAR</button>
+                <button 
+                disabled={this.state.enableButton} 
+                onClick={this.props.closePopup}>KLAR</button>
             
             </div>
           </div>
@@ -59,7 +94,7 @@ class Popup extends React.Component {
 }
 
 
-class ProfilePage extends React.Component {
+class ProfilePageContent extends React.Component {
     
   constructor() {
     super();
@@ -89,7 +124,6 @@ class ProfilePage extends React.Component {
         // Annars, gör ingenting (null)*/}
         {this.state.showPopup ? 
           <Popup
-            text='Skapa ett nytt mål'
             closePopup={this.togglePopup.bind(this)} 
           />
           : null
@@ -98,6 +132,6 @@ class ProfilePage extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default ProfilePage;

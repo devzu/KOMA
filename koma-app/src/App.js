@@ -1,31 +1,3 @@
-
-//import React, { Component } from 'react';
-//import logo from './logo.svg';
-//import './App.css';
-//
-//class App extends Component {
-//  render() {
-//    return (
-//      <div className="Soooop">
-//        <h1 className="App"> 
-//        HEJ LOSERS, I LOVE YOU ALL
-//        </h1>
-//        <header className="App-header">
-//          <img src={logo} className="App-logo" alt="logo" />
-//          <p>
-//            Hejsan kul dhsjvv
-//
-//          </p>
-//          <a
-//            className="Tryck INTE på MIG om du är FEG"
-//            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-//            target="_blank"
-//            rel="noopener noreferrer"
-//          >
-//            Tryck INTE på MIG om du är FEG
-//          </a>
-//        </header>
-
 // **----- DEL 1 -----**
 //IMPORTERA VIKTIGA SAKER
 
@@ -125,6 +97,30 @@ const MainMenu = () => {
             </Router
             >
             
+            <div>
+              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
+              <div className="App">
+                <header className="App-header">
+                  <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
+                  <MainMenu />
+                </header>
+                <div className="ContentanAvTentan">
+                  <Route exact path="/" component={Startsida} />
+              <Route exact path="/knapp2" component={Knapp2} />
+              <Route exact path="/knapp3" component={Knapp3} />
+              <Route exact path="/knapp4" component={Knapp4} />
+              <Route exact path="/knapp5" component={Knapp5} />
+              <div className="app-wave"><div className="ocean">
+              <div className="wave"></div>
+              <div className="wave"></div>
+                </div>
+              </div>
+
+
+              </div> </div>
+            </div>
+
+            </Router>
         );
       }
     }

@@ -73,7 +73,9 @@ const MainMenu = () => {
       {
         return (
             <Router>
-              <div className="wtf">
+            <div>
+              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
+>>>>>>> e7f2e2934e15e379af16b26cf4bc5f57bd322951
               <div className="App">
                 <header className="App-header">
                   <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
@@ -90,7 +92,11 @@ const MainMenu = () => {
               <div className="wave"></div>
                 </div>
               </div>
-              </div> </div></div>
+
+
+              </div> </div>
+            </div>
+
             </Router>
         );
       }

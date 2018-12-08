@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
 .App {
     font-family: 'Didact Gothic', sans-serif;
+    font-size: 14px;
 
 }
 .page-title{
@@ -91,8 +92,6 @@ progress[value]::-webkit-progress-value {
     transition-duration: 2s;
     transition-timing-function: ease;
 }
-
-/* BAJS FÖR POP-UP! */
 
 .popup {
     position: fixed;

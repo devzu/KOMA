@@ -13,144 +13,209 @@ const TipsPage = () => (
 
     {/* ROW MENU BUTTONS WOOP WOOP */}
     <div className="row">
+{/*                 
                 <div className="studieBarCol col"><button className="button">Videor</button></div>
                 <div className="studieBarCol col"><button className="button">Produktivitet</button></div>
                 <div className="studieBarCol col"><button className="button">Appar</button></div>
-                <div className="studieBarCol col"><button className="button">Hemsidor</button></div>
+                <div className="studieBarCol col"><button className="button">Hemsidor</button></div> */}
+                <VideoContent/>
+                <ProdContent/>
+
+                    <div className="container"> 
+                        <div className="row">
+                            <div className="popup">
+                                <div classname="popup-inner">
+                                WITH THE WIND
+                                <button classname="button" onClick=""></button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
     </div>
 
-    {/* CONTAINMENT WITH VIDEO AND STUFF */}
-    <div className="videosContainer">
-        <div className="VideoBox row">  <div className="col">
-        <iframe title="fuckIt" className="WhatEverBro" width="560" height="315" src="https://www.youtube.com/embed/aVS4W7GZSq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <div className="VideoDescText col"><h3>Lorem Ipsum</h3><p>Väldigt informativ video om Lorem Ipsum</p></div> </div>
-    </div>
-    <TipsContainment/>
- 
+   
+
  </div>
  </div>
    
 </div>
 </div>
 );
-class Popup extends React.Component {
+
+
+class PopupVideo extends React.Component{
     
-    constructor(props) {
-        super(props);
-        
-        this.progressValue = 0;
-        
-        this.state = {
+    // Initial states of Popup:
+    // Nollan counter, inga textfält (goalFields)
+    state = {
         counter: 0,
         enableButton: true,
-        goalFields: [],
-        message: '',
-        value: '' }
-        
-        // Att göra detta är bra!!
-        // Varför? Ingen vet...
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.getInfo = this.getInfo.bind(this);
-
-        
-    }
+        goalFields: []
+    };
     
-    handleChange(event) {
-        this.setState({value: event.target.value});  
-    }
-    
-    handleSubmit(event) {
-        this.setState(
-            {message: this.state.value,
-             counter: this.state.counter +  1,
-             enableButton: false}
-        );
-        this.progressValue += 1;
-        event.preventDefault();
-    }
-    
-    getInfo() {
-        
-        this.setState({
-            value: ""
+    // Arrow function
+    addGoal = () => {
+        // Plussa på countern
+        this.setState({ 
+            counter: this.state.counter +  1,
+            enableButton: false
         });
-    }
-
-    render(){
+        // Kalla på createField
+        this.createField(this);
+        
+    } 
+    
+    render() {
+    {/**/}
         return (
-            <div className="popup">SOOP</div>
-        )
+          <div className='popup'>
+            <div className='popup_inner'>
 
-            }
-}   
+                 {/* CONTAINMENT WITH VIDEOS AND STUFF */}
+    <div className="videosContainer">
+        <div className="VideoBox row">  <div className="col">
+        <iframe title="fuckIt" className="WhatEverBro" width="560" height="315" src="https://www.youtube.com/embed/aVS4W7GZSq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div className="VideoDescText col"><h3>Lorem Ipsum</h3><p>Väldigt informativ video om Lorem Ipsum</p></div> </div>
+    </div>
 
-class TipsContainment extends React.Component {
+                
 
-    constructor() {
-        //super();
-        //this.state = {
-        //  showPopup: false
-        // };
-        super();
+                <button 
+                onClick={this.props.closePopup}>KLAR</button>
+            
+            </div>
+          </div>
+
+        );
+  }
+ 
+
+}
+
+class PopupProd extends React.Component{
     
-        this.progressValue = 0;
-    
-        this.state = {
+    // Initial states of Popup:
+    // Nollan counter, inga textfält (goalFields)
+    state = {
         counter: 0,
         enableButton: true,
-        showPopup: false,
-        goalFields: [],
-        message: '',
-        valuue: '', 
-        goals : {'goal1' : 'blob'}}
+        goalFields: []
+    };
     
-        // Att göra detta är bra!!
-        // Varför? Ingen vet...
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.getInfo = this.getInfo.bind(this);
-        this.togglePopup = this.togglePopup.bind(this);
+    // Arrow function
+    addGoal = () => {
+        // Plussa på countern
+        this.setState({ 
+            counter: this.state.counter +  1,
+            enableButton: false
+        });
+        // Kalla på createField
+        this.createField(this);
+        
+    } 
+    
+    render() {
+    {/**/}
+        return (
+          <div className='popup'>
+            <div className='popup_inner'>
+
+                 {/* CONTAINMENT WITH VIDEOS AND STUFF */}
+    <div className="videosContainer">
+        <div className="VideoBox row">  <div className="col">
+        <iframe title="fuckIt" className="WhatEverBro" width="560" height="315" src="https://www.youtube.com/embed/aVS4W7GZSq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div className="VideoDescText col"><h3>Lorem Ipsum</h3><p>Väldigt informativ video om Lorem Ipsum</p></div> </div>
+    </div>
+
+                
+
+                <button 
+                onClick={this.props.closePopup}>KLAR</button>
+            
+            </div>
+          </div>
+
+        );
+  }
+ 
+
 }
-togglePopup() {
+
+
+class VideoContent extends React.Component {
+    
+  constructor() {
+    super();
+    this.state = {
+      showPopup: false
+    };
+  }
+    
+  togglePopup() {
     this.setState({
       showPopup: !this.state.showPopup
     });
-}
-
-handleChange(event) {
-    this.setState({value: event.target.value});  
-}
-
-handleSubmit(event) {
-    let {message} = event.target;
+  }
     
-    this.setState(
-        {message: this.state.value,
-         counter: this.state.counter +  1,
-         enableButton: false,
-        [message]: message}
+  render() {
+    return (
+      <div className="col">
+        <button onClick={this.togglePopup.bind(this)} className="button">
+            En knapp
+        </button>
+        
+        {/* Se detta som en if-sats:
+        // om showPopup == true, gör det som syns: 
+        // Annars, gör ingenting (null)*/}
+        {this.state.showPopup ? 
+          <PopupVideo
+            closePopup={this.togglePopup.bind(this)} 
+          />
+          : null
+        }
+
+      </div>
     );
-    this.progressValue += 1;
-    event.preventDefault();
-    
-    
+  }
 }
 
-getInfo() {
+
+class ProdContent extends React.Component {
+    
+  constructor() {
+    super();
+    this.state = {
+      showPopup: false
+    };
+  }
+    
+  togglePopup() {
     this.setState({
-        message: this.state.value
-        //value: ""
+      showPopup: !this.state.showPopup
     });
+  }
     
+  render() {
+    return (
+      <div className="col">
+        <button onClick={this.togglePopup.bind(this)} className="button">
+            En knapp
+        </button>
+        
+        {/* Se detta som en if-sats:
+        // om showPopup == true, gör det som syns: 
+        // Annars, gör ingenting (null)*/}
+        {this.state.showPopup ? 
+          <PopupProd
+            closePopup={this.togglePopup.bind(this)} 
+          />
+          : null
+        }
+
+      </div>
+    );
+  }
 }
-render() {
-
-    return (<div>poop</div>)
-
-   }
 
 
-
-}
 export default TipsPage;

@@ -37,28 +37,28 @@ class ProgressBar extends React.Component {
     // DU MÅSTE HÄMTA progressMax FRÅN POPUP
     state = {
         progressVal: 0,
-        progressMax: this.props.max,
+        //progressMax: this.props.max,
         enableButton: false,
         grattis: ""
     };
 
     updateProgress = () => {
         
-        if (this.state.progressVal < this.state.progressMax) {
-            
-            this.setState({
-                progressVal: 
-                this.state.progressVal + 1
-            }); 
-        } 
-        
-        if (this.state.progressVal == this.state.progressMax - 1) {
-            
-            this.setState({
-                grattis: "GRATTIS",
-                disableButton: true
-            });   
-        }
+//        if (this.state.progressVal < this.state.progressMax) {
+//            
+//            this.setState({
+//                progressVal: 
+//                this.state.progressVal + 1
+//            }); 
+//        } 
+//        
+//        if (this.state.progressVal == this.state.progressMax - 1) {
+//            
+//            this.setState({
+//                grattis: "GRATTIS",
+//                disableButton: true
+//            });   
+//        }
 
     }
     
@@ -104,6 +104,7 @@ class Popup extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.getInfo = this.getInfo.bind(this);
+        this.incrementCounter = this.incrementCounter.bind(this);
 
         
     }
@@ -228,23 +229,39 @@ class Popup extends React.Component {
 ******************************/
 class ProfilePageContent extends React.Component {
     
-  constructor() {
+  constructor(props) {
     //super();
     //this.state = {
     //  showPopup: false
     // };
-    super();
-
-    this.progressValue = 0;
-
+    super(props);
+      
     this.state = {
+        enableButton: true,
+        showPopup: false,
+        showProgress: false,
+        showContent: false,
+        progressVal: 0,
+        progressMax: 10, 
+        goalFields: [],
+        message: '',
+        valuue: '', 
+        goals : {
+            'goal-1' : 'Färdigställa denna fruktansvärda mardrömskod',
+            'goal-2' : 'Kunna accessa alla meddelanden',
+            'goal-3' : 'Vattna mina kukväxter'}
+    };
+
+   /* this.state = {
     counter: 0,
     enableButton: true,
     showPopup: false,
+    showProgress: false,
+    progressMax: 0, 
     goalFields: [],
     message: '',
     valuue: '', 
-    goals : {'goal1' : 'blob'}}
+    goals : {'goal-1' : 'Färdigställa denna fruktansvärda mardrömskod'}} */
 
     // Att göra detta är bra!!
     // Varför? Ingen vet...
@@ -252,7 +269,9 @@ class ProfilePageContent extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.getInfo = this.getInfo.bind(this);
     this.togglePopup = this.togglePopup.bind(this);
+      
   }
+    
   
     /*
   togglePopup() {
@@ -265,11 +284,12 @@ class ProfilePageContent extends React.Component {
  * Funktioner för popup * 
  ***********************/
     
-    togglePopup() {
+    togglePopup = () => {
         this.setState({
-          showPopup: !this.state.showPopup
-        });
-    }
+          showPopup: !this.state.showPopup,
+          showContent: true
+        })
+    };
     
     handleChange(event) {
         this.setState({value: event.target.value});  
@@ -279,12 +299,9 @@ class ProfilePageContent extends React.Component {
         let {message} = event.target;
         
         this.setState(
-            {message: this.state.value,
-             counter: this.state.counter +  1,
-             enableButton: false,
-            [message]: message}
+            {progressMax: this.state.progressMax +  1
+            }
         );
-        this.progressValue += 1;
         event.preventDefault();
         
         
@@ -298,21 +315,60 @@ class ProfilePageContent extends React.Component {
         
     }
     
+    getInitialState() {
+        return({
+            goals: {
+                'test' : 'fakkk'
+            }
+        });
+    }
+
     addGoal(goal) {
      //create a unike key for each new fruit item
      var timestamp = (new Date()).getTime();
      // update the state object
      this.state.goals['goal-' + timestamp ] = goal;
      // set the state
-     this.setState({ goals : this.state.goals });
+     this.setState({ goals: this.state.goals });
     }
     
+    createGoal(e) {
+        e.preventDefault();
+        //get the fruit object name from the form
+        /*
+        var goalContent = this.refs.goalName.value;
+        //if we have a value
+        //call the addFruit method of the App component
+        //to change the state of the fruit list by adding an new item
+        if(typeof goalContent === 'string' && goalContent.length > 0) {
+          this.props.addGoal(goalContent);
+          //reset the form
+          this.refs.goalForm.reset();
+          
+    }*/
+   }
+    
+    incrementCounter() {
+        
+        this.setState = ({
+            progressMax: this.state.progressMax + 1
+        });
+    
+        console.log('BAJS: ', this.state.progressMax);
+    }
+    
+    updateProgress = () => {
+        console.log('inne i updateProgress (main)');
+        this.state = ({
+            progressVal: this.state.progressVal + 1
+        });
+    }
 /*******************
 *      RENDER      *
 *******************/
     
   render() {
-      console.log('togglePopup: ', this.state.showPopup)
+    console.log('UGH: ', this.state.progressMax);
       
     return (
       <div>
@@ -322,23 +378,33 @@ class ProfilePageContent extends React.Component {
         {/*DIV FÖR "NYTT MÅL"*/}
         <div className="">
             <button onClick={this.togglePopup}>
-            Nytt mål! :)
+            Nytt mål!
             </button>
         </div>
         
-        {/*DIV FÖR POPUP-FÖNSTRET*/}
-        { this.state.showPopup ? 
+        {/*DIV FÖR POPUP-FÖNSTRET vs. PROGRESS-BAREN*/}
+        
+        { this.state.showContent && this.state.showPopup ? 
         <div className="popup_inner">
-
-            <GoalList goals={this.state.goals} />
+           
+            {/*this.addGoal skickas med som props*/}
             <AddGoalForm addGoal={this.addGoal} />
+        
+            <h3><br/><b>Mål:</b></h3>
+            
+            {/*this.state.goals skickas med som props*/}
+            <GoalList goals={this.state.goals} />
+                                             
+            
+
+            
         {/*
             <form onSubmit={this.handleSubmit}>
                 <input type="text" value={this.state.value} onChange={this.handleChange}/>
                     
                 <input type="submit" onClick={this.getInfo} value="Nytt mål"/>
             </form>
-        */}
+        
 
             <h3>
             <b>Mål:</b> <br/>
@@ -346,18 +412,31 @@ class ProfilePageContent extends React.Component {
             <li>{this.state.message}</li>
             </ul>
             <br/>
-            <b>Antal klick: </b> <br/>{this.progressValue}
+            */}
+            <h3>
+            <br/><b>Antal klick: </b> <br/>{this.state.progressMax}
             </h3>
 
             <button 
             disabled={this.state.enableButton} 
             onClick={this.togglePopup}>KLAR</button>
-        </div> 
-        : null }
-        
-        {/*DIV FÖR PROGRESS-BAR*/}
-        <div className="">
         </div>
+        
+        
+        : <div className="">
+            <progress value={this.state.progressVal} max={this.state.progressMax}></progress>
+        {/*
+            <button disabled={this.state.disableButton} onClick={this.updateProgress}>
+            Mål!
+            </button>
+        */}
+        
+        <GoalList goals={this.state.goals} />
+            
+            <h4>{this.state.grattis}</h4>
+        </div>
+        }
+    
         
         {/* DET SOM SYNS FÖRST 
         
@@ -384,36 +463,43 @@ class ProfilePageContent extends React.Component {
       </div>
     );
   }
-  
+ 
 }
 
- class GoalList extends React.Component {
-      
+/******************************
+*          ANNAT MÖG          *
+******************************/
+class GoalList extends React.Component {
+    
+updateProgress() {
+    console.log('inne i updateProgress (andra)');
+    }
+     
     render() {
         return (
           <div>
-            <ul className="list-group text-center">
+            <ol>
               {
             Object.keys(this.props.goals).map(function(key) {
-                  return <li className="list-group-item list-group-item-info">{this.props.goals[key]}</li>
+                  return <li><button onClick={this.updateProgress}>X </button> &nbsp;{this.props.goals[key]}</li>
                 }.bind(this))
               }
-            </ul>
+            </ol>
            </div>
          );
        }
 }
 
-class AddGoalForm extends React.Component {
+class AddGoalForm extends React.Component {   
       createGoal(e) {
         e.preventDefault();
         //get the fruit object name from the form
-        var goal = this.refs.goalName.value;
+        var goalContent = this.id.goalName.value;
         //if we have a value
         //call the addFruit method of the App component
         //to change the state of the fruit list by adding an new item
-        if(typeof goal === 'string' && goal.length > 0) {
-          this.props.addGoal(goal);
+        if(typeof goalContent === 'string' && goalContent.length > 0) {
+          this.props.addGoal(goalContent);
           //reset the form
           this.refs.goalForm.reset();
         }
@@ -423,9 +509,9 @@ class AddGoalForm extends React.Component {
         return(
           <form ref="goalForm" onSubmit={this.createGoal}>
           <div>
-              <input type="text" id="goalItem" placeholder="Här kan du skriva ditt mål" ref="goalName" />
+              <input type="text" placeholder="Här kan du skriva ditt mål" id="goalName" size="60"/>
           </div>
-          <button type="submit" className="btn btn-primary">Add Goal</button>
+          <button type="submit">Lägg till delmål</button>
     
          </form>
         )

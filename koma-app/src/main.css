@@ -52,6 +52,9 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
 	position:relative;
 	top:1px;
 }
+.liten{
+    font-size: 1vw;
+}
 
 .Blue{
     display: absolute;

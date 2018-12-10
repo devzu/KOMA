@@ -68,31 +68,35 @@ font-family: 'Didact Gothic', sans-serif;
     }
 
 .menubutton {
- background-color:#cfe2f3;
--moz-border-radius:28px;
--webkit-border-radius:28px;
-border-radius:28px;
-border:0px solid #82c3ff;
-display:inline-block;
-cursor:pointer;
-color:#ffffff;
-font-family:Arial;
-font-size:17px;
-text-decoration:none;
-text-shadow:0px 1px 0px #649ce0;
-max-width: 13vh;
-    float: left;
+  background-color:#cfe2f3;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:0px solid #82c3ff;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #649ce0;
+  max-width: 13vh;
+  float: left;
+  margin: 5px;
+
 }
 
-    .menuButton:hover{
+    .menuButton:hover {
     background-color:#cfe2f3;
 
     }
 
-    .menuButton:active{
+    .menuButton:active {
         position:relative;
         top:1px;
+        background-color: green;
     }
+
 .ContentanAvTentan {
 
   display: grid;

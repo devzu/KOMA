@@ -16,53 +16,39 @@
 // **--DEL TVÅ--**
 // Konstanter-> Våra delar utav sidorna. Dessa "laddar vi in" när vi trycker på dem.
     const Startsida = () => (
-      <div> hhhhh
-        <HelloWorldText />
-</div>
-    )
-// ignorera namnen just nu ok
-    const Knapp2 = () => (
-      <div>
-        <MainPage/>
-      </div>
-    )
-
-    const Knapp3 = () => (
-      <CalendarPage/>
-    )
-
-    const Knapp4 = () => (
       <div>
         <ProfilePage/>
       </div>
     )
 
-    const Knapp5 = () => (
+    const Knapp2 = () => (
       <div>
-       <TipsPage/>
+        <CalendarPage/>
       </div>
     )
+
+    const Knapp3 = () => (
+      <TipsPage/>
+    )
+
 
 const MainMenu = () => {
   return (
     
     <div className="navbar">
-      
+           
       <Link to="/">
         <button className="menubutton dissapear"><span className="glyphicon glyphicon-stats dissapear"></span></button>
-      </Link>
+      </Link> 
+      
       <Link to="/knapp2">
-        <button className="menubutton dissapear"><span className="glyphicon glyphicon-pencil dissapear"></span></button>
-      </Link>
-      <Link to="/knapp3">
         <button className="menubutton dissapear"><span className="glyphicon glyphicon-calendar dissapear"></span></button>
       </Link>
-      <Link to="/knapp4">
-        <button className="menubutton dissapear"><span className="glyphicon glyphicon-send dissapear"></span></button>
+
+      <Link to="/knapp3">
+        <button className="menubutton dissapear"><span className="glyphicon glyphicon-education dissapear"></span></button>
       </Link>
-      <Link to="/knapp5">
-        <button className="menubutton dissapear"><span className="glyphicon glyphicon-cog dissapear"></span></button>
-      </Link>
+
     </div>
   );
 };
@@ -103,8 +89,6 @@ const MainMenu = () => {
                   <Route exact path="/" component={Startsida} />
                   <Route exact path="/knapp2" component={Knapp2} />
                   <Route exact path="/knapp3" component={Knapp3} />
-                  <Route exact path="/knapp4" component={Knapp4} />
-                  <Route exact path="/knapp5" component={Knapp5} />
                   {/* END CONTENT */}
               
                 </div>

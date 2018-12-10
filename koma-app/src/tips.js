@@ -33,13 +33,15 @@ const TipsPage = () => (
                     </div>
     </div>
 
-   
+                        <div className="VideoDescText col"><h3>Lorem Ipsum</h3><p>Väldigt informativ video om Lorem Ipsum</p>
+                        </div> 
 
- </div>
- </div>
-   
-</div>
-</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
 );
 
 

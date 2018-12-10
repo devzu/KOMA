@@ -1,31 +1,3 @@
-
-//import React, { Component } from 'react';
-//import logo from './logo.svg';
-//import './App.css';
-//
-//class App extends Component {
-//  render() {
-//    return (
-//      <div className="Soooop">
-//        <h1 className="App"> 
-//        HEJ LOSERS, I LOVE YOU ALL
-//        </h1>
-//        <header className="App-header">
-//          <img src={logo} className="App-logo" alt="logo" />
-//          <p>
-//            Hejsan kul dhsjvv
-//
-//          </p>
-//          <a
-//            className="Tryck INTE på MIG om du är FEG"
-//            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-//            target="_blank"
-//            rel="noopener noreferrer"
-//          >
-//            Tryck INTE på MIG om du är FEG
-//          </a>
-//        </header>
-
 // **----- DEL 1 -----**
 //IMPORTERA VIKTIGA SAKER
 
@@ -101,26 +73,56 @@ const MainMenu = () => {
       {
         return (
             <Router>
-            <div>
+              <div> {/* OUTERMOST DIV INSIDE ROUTER */}
+
+              {/* DIV CONTAINER AND ROW FOR BOOSTRAP COL */}
+            <div class ="container">
+            <div className="row">
+
               <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
+            {/* APP-CLASSNAME START */}
               <div className="App">
 
-                <header className="App-header">
-                  <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
-                  <MainMenu />
+              {/* ////PART ONE//// */}
+               {/* HEADER CLASSNAME START */}
+                <header className="App-header col-s-1">
+
+                  {/* LOGO */}
+                    <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
+                  {/* END LOGO */}
+
+                  {/* MAINMENU FUNCTION */}
+                    <MainMenu />
+                  {/* END MAINMENU FUNCTION */}
+
                 </header>
-                <div className="knappar">
+                {/* HEADER CLASSNAME END */}
+
+                {/* ////PART TWO//// */}
+                {/* CONTENT  */}
+                <div className="ContentanAvTentan col-s-11">
                   <Route exact path="/" component={Startsida} />
-              <Route exact path="/knapp2" component={Knapp2} />
-              <Route exact path="/knapp3" component={Knapp3} />
-              <Route exact path="/knapp4" component={Knapp4} />
-              <Route exact path="/knapp5" component={Knapp5} />
-              <div className="app-wave"><div className="ocean">
-              <div className="wave"></div>
-              <div className="wave"></div>
+                  <Route exact path="/knapp2" component={Knapp2} />
+                  <Route exact path="/knapp3" component={Knapp3} />
+                  <Route exact path="/knapp4" component={Knapp4} />
+                  <Route exact path="/knapp5" component={Knapp5} />
+                  {/* END CONTENT */}
+              
                 </div>
-              </div>
-              </div> </div>
+
+              </div>{/* END APP-CLASSNAME START */}
+
+            
+              {/* END ROW, END CONTAINER */}
+            </div> </div>
+
+            {/* OCEAN WAVE */}
+            <div className="app-wave"><div className="ocean">
+              <div className="wave"></div>
+              <div className="wave"></div></div></div> 
+              {/* OCEAN WAVE END*/}
+
+            {/* END OUTERMOST DIV CONTAINER BEFORE ROUTER */}
             </div>
             </Router>
         );

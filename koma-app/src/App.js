@@ -73,30 +73,57 @@ const MainMenu = () => {
       {
         return (
             <Router>
-            <div>
+              <div> {/* OUTERMOST DIV INSIDE ROUTER */}
+
+              {/* DIV CONTAINER AND ROW FOR BOOSTRAP COL */}
+            <div class ="container">
+            <div className="row">
+
               <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
->>>>>>> e7f2e2934e15e379af16b26cf4bc5f57bd322951
+            {/* APP-CLASSNAME START */}
               <div className="App">
-                <header className="App-header">
-                  <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
-                  <MainMenu />
+
+              {/* ////PART ONE//// */}
+               {/* HEADER CLASSNAME START */}
+                <header className="App-header col-s-1">
+
+                  {/* LOGO */}
+                    <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
+                  {/* END LOGO */}
+
+                  {/* MAINMENU FUNCTION */}
+                    <MainMenu />
+                  {/* END MAINMENU FUNCTION */}
+
                 </header>
-                <div className="ContentanAvTentan">
+                {/* HEADER CLASSNAME END */}
+
+                {/* ////PART TWO//// */}
+                {/* CONTENT  */}
+                <div className="ContentanAvTentan col-s-11">
                   <Route exact path="/" component={Startsida} />
-              <Route exact path="/knapp2" component={Knapp2} />
-              <Route exact path="/knapp3" component={Knapp3} />
-              <Route exact path="/knapp4" component={Knapp4} />
-              <Route exact path="/knapp5" component={Knapp5} />
-              <div className="app-wave"><div className="ocean">
-              <div className="wave"></div>
-              <div className="wave"></div>
+                  <Route exact path="/knapp2" component={Knapp2} />
+                  <Route exact path="/knapp3" component={Knapp3} />
+                  <Route exact path="/knapp4" component={Knapp4} />
+                  <Route exact path="/knapp5" component={Knapp5} />
+                  {/* END CONTENT */}
+              
                 </div>
-              </div>
 
+              </div>{/* END APP-CLASSNAME START */}
 
-              </div> </div>
+            
+              {/* END ROW, END CONTAINER */}
+            </div> </div>
+
+            {/* OCEAN WAVE */}
+            <div className="app-wave"><div className="ocean">
+              <div className="wave"></div>
+              <div className="wave"></div></div></div> 
+              {/* OCEAN WAVE END*/}
+
+            {/* END OUTERMOST DIV CONTAINER BEFORE ROUTER */}
             </div>
-
             </Router>
         );
       }

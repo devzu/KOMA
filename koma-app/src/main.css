@@ -31,10 +31,12 @@
 
 .studieBarCol{
     display: grid;
+    text-align: center;
+    font-size: 3vh;
+ }
 /*******************
 * FÖR PROFILE PAGE *
-********************/ }
-
+********************/
 #new_goal {
     font-size: 100px;
 }

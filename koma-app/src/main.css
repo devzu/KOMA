@@ -13,6 +13,8 @@
     background-color:rgba(207, 226, 243, 0.4);
     border-radius: 10px 10px 10px 10px;
     padding: 10px;
+    width: 500px;
+    height: 500px;
     /*opacity: 0.2;*/
     z-index: 1;
 
@@ -96,13 +98,12 @@ progress[value]::-webkit-progress-value {
 }
 
 .popup_inner {
-    position: absolute;
-    left: 25%;
-    right: 25%;
-    top: 25%;
-    bottom: 25%;
-    margin: auto;
-    padding: 10px;
-    border-radius: 10px;
     background: pink;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.popup_outer {
+    
 }

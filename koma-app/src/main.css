@@ -55,6 +55,15 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
 .liten{
     font-size: 1vw;
 }
+.done {
+    color: grey;
+}
+.reddo{
+    color: #ff9900;
+}
+.mitten{
+    margin:auto;
+}
 
 .Blue{
     display: absolute;
@@ -91,6 +100,10 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
  }
  .WhatEverBro{
      margin: 1vw;
+ }
+
+ .HELVETE{
+width: auto;
  }
 /*******************
 * FÖR PROFILE PAGE *

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import './main.css';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {Container, Row, Col} from 'reactstrap';
 import Calendar from 'react-calendar';
 import TipsPage from './tips';
+import './main.css';
 
 const CalendarPage = () => ( 
  <div className="">
@@ -16,7 +17,7 @@ class Kalender extends React.Component{
         render(){
                 return(
                         <div className="NOPE"><h3>HELA JÄVLA MÅNAN'</h3>
-                        <Calendar/></div>
+                        <div className="container"><div className="row"><div className="mitten col align-self-center"><Col><Calendar className="col Blue"/></Col></div></div></div></div>
                 )
         }
 }
@@ -28,8 +29,8 @@ class Deadlines extends React.Component{
                         <div className="NOPE">
                                 <div className="ThisWeek"><h3>Denna vecka:</h3>
                                 <hr></hr>
-                                <p><span className="glyphicon glyphicon-calendar liten"></span> - <strike>(11/12) En de adline</strike></p>
-                                <p><span className="glyphicon glyphicon-calendar liten reddo"></span> - (18/12)En deadline till</p> 
+                                <p className="done"><span className="glyphicon glyphicon-calendar liten done"></span> - <strike>(11/12) En de adline</strike></p>
+                                <p className=""><span className="glyphicon glyphicon-calendar liten reddo"></span> - (18/12)En deadline till</p> 
                                 <br></br><br></br>
                                 <h3>Denna månaden:</h3>
                                 <hr></hr>

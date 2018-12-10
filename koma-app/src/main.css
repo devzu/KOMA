@@ -53,6 +53,14 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
 	top:1px;
 }
 
+.Blue{
+    display: absolute;
+    background-color:rgba(207, 226, 243, 0.4);
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px;
+    /*opacity: 0.2;*/
+    z-index: 400;
+}
         
 /**************
 *  TIPS PAGE  *

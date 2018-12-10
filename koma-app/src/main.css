@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
+/***********
+*  APP.JS  *
+***********/
 .App {
     font-family: 'Didact Gothic', sans-serif;
     font-size: 14px;
@@ -13,6 +16,8 @@
     background-color:rgba(207, 226, 243, 0.4);
     border-radius: 10px 10px 10px 10px;
     padding: 10px;
+    width: 500px;
+    height: 500px;
     /*opacity: 0.2;*/
     z-index: 1;
 
@@ -22,6 +27,56 @@
 .content-box{
     text-align: center;
 }
+/*********
+GREJS FÖR ALLA HEJSAN HOPPSAN
+*************/
+.button {
+	background-color:#4a86e8;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #4a86e8;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #2b4570;
+}
+.button:hover {
+	background-color:#cfe2f3;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+.liten{
+    font-size: 1vw;
+}
+.done {
+    color: grey;
+}
+.reddo{
+    color: #ff9900;
+}
+.mitten{
+    margin:auto;
+}
+
+.Blue{
+    display: absolute;
+    background-color:rgba(207, 226, 243, 0.4);
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px;
+    /*opacity: 0.2;*/
+    z-index: 1;
+}
+        
+/**************
+*  TIPS PAGE  *
+**************/
 
 .studieBar {
     display: inline-grid;
@@ -31,10 +86,28 @@
 
 .studieBarCol{
     display: grid;
+    text-align: center;
+    font-size: 3vh;
+ }
+
+ #tipsText {
+     margin: auto;
+
+ }
+
+ .VideosContainer{
+     margin: 1vw;
+ }
+ .WhatEverBro{
+     margin: 1vw;
+ }
+
+ .HELVETE{
+width: auto;
+ }
 /*******************
 * FÖR PROFILE PAGE *
-********************/ }
-
+********************/
 #new_goal {
     font-size: 100px;
 }
@@ -93,25 +166,13 @@ progress[value]::-webkit-progress-value {
     transition-timing-function: ease;
 }
 
-.popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    background-color: rgba(0,0,0, 0.5);
-}
 .popup_inner {
-    position: absolute;
-    left: 25%;
-    right: 25%;
-    top: 25%;
-    bottom: 25%;
-    margin: auto;
+    background: pink;
     padding: 10px;
+    margin: 10px;
     border-radius: 10px;
-    background: white;
+}
+
+.popup_outer {
+    
 }

@@ -5,7 +5,10 @@ body {
     overflow: hidden;
     color: black;
 }
-
+.no-gutter > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
 
 /* APP STUFF CSS MAIN */
 .App {
@@ -14,7 +17,7 @@ font-family: 'Didact Gothic', sans-serif;
   display: absolute;
     overflow: hidden;
     max-width: 100%;
-    margin: auto;
+    margin: 1vw;
     
 }
 
@@ -99,16 +102,12 @@ max-width: 13vh;
 }
 .App-header {
   background-color: #cfe2f3;
-  max-width: 80px;
-    min-width: 80px;
-    min-height: 90vh;
   display: block;
     /*
   flex-direction: column;
   align-items: center;
   justify-content: center; */
   float: left;
-
   font-size: calc(1px + 1vmin);
   color: black;
     display: inline-block;
@@ -195,4 +194,3 @@ app-wave {
 }
 
 
-/* PAGES LOL 1 HEJ I DONT KNOW */

@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
+/***********
+*  APP.JS  *
+***********/
 .App {
     font-family: 'Didact Gothic', sans-serif;
     font-size: 14px;
@@ -22,6 +25,36 @@
 .content-box{
     text-align: center;
 }
+/*********
+GREJS FÖR ALLA HEJSAN HOPPSAN
+*************/
+.button {
+	background-color:#4a86e8;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #4a86e8;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #2b4570;
+}
+.button:hover {
+	background-color:#cfe2f3;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+        
+/**************
+*  TIPS PAGE  *
+**************/
 
 .studieBar {
     display: inline-grid;
@@ -33,6 +66,18 @@
     display: grid;
     text-align: center;
     font-size: 3vh;
+ }
+
+ #tipsText {
+     margin: auto;
+
+ }
+
+ .VideosContainer{
+     margin: 1vw;
+ }
+ .WhatEverBro{
+     margin: 1vw;
  }
 /*******************
 * FÖR PROFILE PAGE *

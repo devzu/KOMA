@@ -75,13 +75,12 @@ const MainMenu = () => {
             <Router>
               <div> {/* OUTERMOST DIV INSIDE ROUTER */}
 
-              {/* DIV CONTAINER AND ROW FOR BOOSTRAP COL */}
-            <div class ="container">
+              {/* DIV ROW FOR BOOSTRAP COL */}
             <div className="row">
 
               <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
             {/* APP-CLASSNAME START */}
-              <div className="App">
+              <div className="App col-s-12">
 
               {/* ////PART ONE//// */}
                {/* HEADER CLASSNAME START */}
@@ -114,7 +113,7 @@ const MainMenu = () => {
 
             
               {/* END ROW, END CONTAINER */}
-            </div> </div>
+            </div>
 
             {/* OCEAN WAVE */}
             <div className="app-wave"><div className="ocean">

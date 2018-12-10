@@ -501,7 +501,7 @@ class AddGoalForm extends React.Component {
         if(typeof goalContent === 'string' && goalContent.length > 0) {
           this.props.addGoal(goalContent);
           //reset the form
-          this.refs.goalForm.reset();
+          this.ref.goalForm.reset();
         }
        }
     

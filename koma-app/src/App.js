@@ -11,6 +11,7 @@
  import ProfilePage from './profile.js';
  import TipsPage from './tips.js';
  import HelloWorldText from './b.js';
+ import './main.css'
 
 
 // **--DEL TVÅ--**
@@ -37,17 +38,18 @@ const MainMenu = () => {
     
     <div className="navbar">
            
-      <Link to="/">
-        <button className="menubutton dissapear"><span className="glyphicon glyphicon-stats dissapear"></span></button>
-      </Link> 
+      <div className="row"><Link to="/">
+      <button className="menubutton dissapear col"><span className="glyphicon glyphicon-stats dissapear"></span></button>
+      </Link></div> 
       
-      <Link to="/knapp2">
-        <button className="menubutton dissapear"><span className="glyphicon glyphicon-calendar dissapear"></span></button>
-      </Link>
-
+      <div className="row"><Link to="/knapp2">
+      <button className="menubutton dissapear col"><span className="glyphicon glyphicon-calendar dissapear"></span></button>
+      </Link></div>
+      
+      <div className="row">
       <Link to="/knapp3">
-        <button className="menubutton dissapear"><span className="glyphicon glyphicon-education dissapear"></span></button>
-      </Link>
+      <button className="menubutton dissapear col"><span className="glyphicon glyphicon-education dissapear"></span></button>
+      </Link></div>
 
     </div>
   );
@@ -59,30 +61,6 @@ const MainMenu = () => {
       {
         return (
             <Router>
-                <div> 
-                  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
-                  <div className="App">
-                    <header className="App-header">
-                      <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
-                      <MainMenu />
-                    </header>
-                    <div className="knappar">
-                    <Route exact path="/" component={Startsida} />
-                    <Route exact path="/knapp2" component={Knapp2} />
-                    <Route exact path="/knapp3" component={Knapp3} />
-                    <Route exact path="/knapp4" component={Knapp4} />
-                    <Route exact path="/knapp5" component={Knapp5} />
-                    <div className="app-wave"><div className="ocean">
-                    <div className="wave"></div>
-                    <div className="wave"></div>
-                    </div>
-                  </div>
-                    </div>
-                  </div> 
-                </div>
-            </Router
-            >
-            
               <div> {/* OUTERMOST DIV INSIDE ROUTER */}
 
               {/* DIV ROW FOR BOOSTRAP COL */}
@@ -94,7 +72,7 @@ const MainMenu = () => {
 
               {/* ////PART ONE//// */}
                {/* HEADER CLASSNAME START */}
-                <header className="App-header col-s-1">
+                <div className="App-header col-xl-1">
 
                   {/* LOGO */}
                     <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
@@ -104,7 +82,7 @@ const MainMenu = () => {
                     <MainMenu />
                   {/* END MAINMENU FUNCTION */}
 
-                </header>
+                </div>
                 {/* HEADER CLASSNAME END */}
 
                 {/* ////PART TWO//// */}

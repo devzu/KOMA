@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './main.css';
+
+
 const TipsPage = () => ( 
     <div><Tips/></div>
 );
@@ -179,7 +181,7 @@ class ProdContent extends React.Component {
 }
 
 class Tips extends React.Component{
-
+    
     render(){
         return ( <div>
 
@@ -215,10 +217,24 @@ class Tips extends React.Component{
                         </div> 
                     </div>
     </div>
-
+                    
                         <div className="VideoDescText col"><h3>Lorem Ipsum</h3><p>Väldigt informativ video om Lorem Ipsum</p>
                         </div> 
-
+                    <div> Elin starta här </div>
+                
+                    <div> VIDEO </div>
+                          
+                        <a href="https://www.youtube.com/watch?v=pZgMpjjgCRA">
+                            <div class="link">
+                                Improving Cornell Notes With Sketchnoting Techniques
+                            </div>
+                        </a>
+                    
+                    <div> HEMSIDA </div>
+                
+                
+                    <div> BÖCKER </div>
+                    
                     </div>
                 </div>
 

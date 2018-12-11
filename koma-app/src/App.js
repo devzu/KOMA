@@ -32,6 +32,10 @@ import './main.css'
      <TipsPage/>
    )
 
+   const TestSida = () => (
+     <HelloWorldText/>
+   )
+
 
 const MainMenu = () => {
  return (
@@ -75,7 +79,7 @@ const MainMenu = () => {
                <div className="App-header col-xl-1">
 
                  {/* LOGO */}
-                   <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
+                   <Link to="/TestSida"><div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div></Link>
                  {/* END LOGO */}
 
                  {/* MAINMENU FUNCTION */}
@@ -91,6 +95,7 @@ const MainMenu = () => {
                  <Route exact path="/" component={Startsida} />
                  <Route exact path="/knapp2" component={Knapp2} />
                  <Route exact path="/knapp3" component={Knapp3} />
+                 <Route exact path="/TestSida" component={TestSida} />
                  {/* END CONTENT */}
              
                </div>

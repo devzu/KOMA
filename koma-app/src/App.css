@@ -153,6 +153,7 @@ app-wave {
   background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
   overflow: hidden;
   max-width: 100%;
+  z-index: -5;
 }
 
 .ocean { 
@@ -173,7 +174,7 @@ app-wave {
   animation: wave 30s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
     overflow: hidden;
-    
+  z-index: -5;
 }
 
 .wave:nth-of-type(2) {

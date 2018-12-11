@@ -16,7 +16,7 @@ const CalendarPage = () => (
 class Kalender extends React.Component{
         render(){
                 return(
-                        <div className="NOPE"><h3>HELA JÄVLA MÅNAN'</h3>
+                        <div className="NOPE"><h3>Denna månaden:</h3>
                         <div className="container"><div className="row"><div className="mitten col align-self-center"><Col><Calendar className="col Blue"/></Col></div></div></div></div>
                 )
         }

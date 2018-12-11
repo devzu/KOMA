@@ -15,10 +15,10 @@ body {
   text-align: left;
 font-family: 'Didact Gothic', sans-serif;
   display: absolute;
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100%;
     margin: 1vw;
-    
+    overflow-y: auto;
 }
 
 
@@ -102,6 +102,7 @@ font-family: 'Didact Gothic', sans-serif;
   display: grid;
   margin-top: 30px;
   padding: 5px;
+
 
 }
 .App-header {

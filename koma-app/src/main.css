@@ -5,6 +5,7 @@
 .App {
     font-family: 'Didact Gothic', sans-serif;
     font-size: 14px;
+    overflow-y: scroll;
 
 }
 .page-title{
@@ -23,6 +24,10 @@
 
 }
 .containerBox{
+}
+
+.boxContent {
+    overflow-y: auto;
 }
 .content-box{
     text-align: center;
@@ -43,7 +48,8 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
 	font-size:17px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:1px 1px 0px #2b4570;
+    text-shadow:1px 1px 0px #2b4570;
+    margin: 12px;
 }
 .button:hover {
 	background-color:#cfe2f3;
@@ -72,6 +78,8 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
     padding: 10px;
     /*opacity: 0.2;*/
     z-index: 1;
+    overflow-y: auto;
+    min-height: 500px;
 }
         
 /**************
@@ -102,9 +110,6 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
      margin: 1vw;
  }
 
- .HELVETE{
-width: auto;
- }
 /*******************
 * FÖR PROFILE PAGE *
 ********************/

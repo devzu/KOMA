@@ -1,21 +1,26 @@
+/* APP.CSS is only for the APP-SHELL, not for the seperate pages imported into the app.*/
 @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
 body {
     font-family: 'Black And White Picture', sans-serif;
     overflow: hidden;
     color: black;
 }
-
+.no-gutter > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
 
 /* APP STUFF CSS MAIN */
 .App {
   text-align: left;
-    font-family: 'Didact Gothic', sans-serif;
-  display:inline-block;
+font-family: 'Didact Gothic', sans-serif;
+  display: absolute;
     overflow: hidden;
-    max-width: 100%;
-    margin: auto;
+    width: 100%;
+    margin: 1vw;
     
 }
+
 
 #Hanna_knapp {
     background-color: blue;
@@ -64,46 +69,49 @@ body {
     }
 
 .menubutton {
- background-color:#cfe2f3;
--moz-border-radius:28px;
--webkit-border-radius:28px;
-border-radius:28px;
-border:0px solid #82c3ff;
-display:inline-block;
-cursor:pointer;
-color:#ffffff;
-font-family:Arial;
-font-size:17px;
-text-decoration:none;
-text-shadow:0px 1px 0px #649ce0;
-max-width: 13vh;
-    float: left;
+  background-color:#cfe2f3;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:2px;
+  border:0px solid #82c3ff;
+  display:block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #649ce0;
+  float: left;
+  margin-top: 20px;
+
 }
 
-    .menuButton:hover{
+    .menuButton:hover {
     background-color:#cfe2f3;
 
     }
 
-    .menuButton:active{
+    .menuButton:active {
         position:relative;
         top:1px;
+        background-color: green;
     }
-.knappar {
+
+.ContentanAvTentan {
+
+  display: grid;
+  margin-top: 30px;
+  padding: 5px;
 
 }
 .App-header {
   background-color: #cfe2f3;
-  max-width: 80px;
-    min-width: 80px;
-    min-height: 90vh;
   display: block;
     /*
   flex-direction: column;
   align-items: center;
   justify-content: center; */
   float: left;
-
   font-size: calc(1px + 1vmin);
   color: black;
     display: inline-block;
@@ -112,6 +120,9 @@ max-width: 13vh;
 -moz-border-radius: 10px 10px 10px 10px;
 -webkit-border-radius: 10px 10px 10px 10px;
 border: 0px solid #000000;
+padding: 0px;
+min-height: 70%;
+text-align: center;
 }
 
 .App-link {
@@ -128,7 +139,7 @@ border: 0px solid #000000;
 }
 .glyphicon {
     font-size: 50px;
-    margin: 5px;
+    margin: 0px;
     
 }
 
@@ -142,6 +153,7 @@ app-wave {
   background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
   overflow: hidden;
   max-width: 100%;
+  z-index: -5;
 }
 
 .ocean { 
@@ -162,7 +174,7 @@ app-wave {
   animation: wave 30s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
     overflow: hidden;
-    
+  z-index: -5;
 }
 
 .wave:nth-of-type(2) {
@@ -190,4 +202,3 @@ app-wave {
 }
 
 
-/* PAGES LOL 1 HEJ I DONT KNOW */

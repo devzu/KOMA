@@ -21,6 +21,7 @@ font-family: 'Didact Gothic', sans-serif;
     
 }
 
+
 #Hanna_knapp {
     background-color: blue;
 }
@@ -71,18 +72,17 @@ font-family: 'Didact Gothic', sans-serif;
   background-color:#cfe2f3;
   -moz-border-radius:28px;
   -webkit-border-radius:28px;
-  border-radius:28px;
+  border-radius:2px;
   border:0px solid #82c3ff;
-  display:inline-block;
+  display:block;
   cursor:pointer;
   color:#ffffff;
   font-family:Arial;
   font-size:17px;
   text-decoration:none;
   text-shadow:0px 1px 0px #649ce0;
-  max-width: 13vh;
   float: left;
-  margin: 5px;
+  margin-top: 20px;
 
 }
 
@@ -120,6 +120,9 @@ font-family: 'Didact Gothic', sans-serif;
 -moz-border-radius: 10px 10px 10px 10px;
 -webkit-border-radius: 10px 10px 10px 10px;
 border: 0px solid #000000;
+padding: 0px;
+min-height: 70%;
+text-align: center;
 }
 
 .App-link {
@@ -136,7 +139,7 @@ border: 0px solid #000000;
 }
 .glyphicon {
     font-size: 50px;
-    margin: 5px;
+    margin: 0px;
     
 }
 

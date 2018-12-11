@@ -201,9 +201,31 @@ app-wave {
   }
 }
 
+/* STUDIETIPS */
 .link
 {
-    height: 6vw;
     padding: 3vw;
 }
+.studie
+{
+    width: 30vw;
+}
+.studie:link {
+  color: black;
+  text-decoration: none;
+}
 
+/* visited link */
+.studie:visited {
+  color: black;
+}
+
+/* mouse over link */
+.studie:hover {
+  color: none;
+}
+
+/* selected link */
+.studie:active {
+  color: none;
+}

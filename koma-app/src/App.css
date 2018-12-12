@@ -69,7 +69,7 @@ font-family: 'Didact Gothic', sans-serif;
     }
 
 .menubutton {
-  background-color:#cfe2f3;
+  background-color: #cfe2f3;
   -moz-border-radius:28px;
   -webkit-border-radius:28px;
   border-radius:2px;
@@ -87,7 +87,7 @@ font-family: 'Didact Gothic', sans-serif;
 }
 
     .menuButton:hover {
-    background-color:#cfe2f3;
+    background-color:lawngreen;
 
     }
 
@@ -145,13 +145,13 @@ text-align: center;
 }
 
 .glyphicon:hover {
-    color:#cfe2f3;
+    color: #FF9900;
 }
 
 /* APP ANIMATION OCEAN WAVE */
 app-wave { height: 100%; }
 app-wave {
-  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  /*background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);*/
   overflow: hidden;
   max-width: 100%;
   z-index: -5;
@@ -163,7 +163,8 @@ app-wave {
   position:absolute;
   bottom:0;
   left:0;
-  background: #A9D0F2;
+  background: #e3eef8;
+    /* HÄR !! */
 }
 
 .wave {

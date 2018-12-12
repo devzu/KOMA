@@ -16,7 +16,7 @@
             }
 .mittenBox {
     display: absolute;
-    background-color:rgba(207, 226, 243);
+    background-color: #cfe2f3;
     border-radius: 10px 10px 10px 10px;
     padding: 10px;
     width: 500px;
@@ -76,7 +76,8 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
 
 .Blue{
     display: absolute;
-    background-color:rgba(207, 226, 243);
+    /*background-color:rgba(207, 226, 243);*/
+    background-color: #8DB4EE;
     border-radius: 10px 10px 10px 10px;
     padding: 10px;
     /*opacity: 0.2;*/

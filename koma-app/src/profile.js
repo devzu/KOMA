@@ -43,7 +43,14 @@ class ProfilePageContent extends React.Component {
             
             GRATTIS: '',
             goalName: 'VÄLKOMMEN',
-            goalDesc: '',
+            goalDesc1: '',
+            goalDesc2: '',
+            goalDesc3: '',
+            goalDesc4: '',
+            goalDesc5: '',
+            
+            value: [],
+            textvalue : "",
             
             goals: {
                 'goal-1' : 'Uppg. 3-9',
@@ -55,6 +62,8 @@ class ProfilePageContent extends React.Component {
         };
         
         this.closePopup = this.closePopup.bind(this);
+        this.handleAddTodoItem = this.handleAddTodoItem.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         
     }
     
@@ -100,6 +109,24 @@ class ProfilePageContent extends React.Component {
         });
     }
 
+    handleChange(e) {
+        
+        this.setState({
+          textvalue:e.target.value
+        })
+    }
+
+    handleAddTodoItem() {
+        
+        // Lägger till 'textvalue' i arrayen 'value'
+        this.state.value.push(this.state.textvalue)
+
+        //Uppdaterar state i funktionen (annars funkade tydligen ingenting)
+        this.setState(this.state);
+        this.setState({doneButton: false});
+
+    }
+
     // Räkna progress (progressCount)
     incrementCounter = () => {
         this.setState({
@@ -119,6 +146,9 @@ class ProfilePageContent extends React.Component {
     *       RENDER()       *
     ***********************/
     render() {
+        
+        console.log('goalDesc ', this.state.goalDesc);
+        
        return(
         <div className="row">
            
@@ -161,22 +191,34 @@ class ProfilePageContent extends React.Component {
            <input type="text"></input>
                
            <br/>
+           
+           {/* DELMÅL SOM FUNGERAR!!! */}
                
            <h2>Delmål:</h2>
                
-           <input type="text"></input>
-               
-           <br/>
-                
-           <button onClick={this.addGoal}>Lägg till</button>
+            <input type="text" placeholder="Skriv ditt delmål här" className="text" onChange={this.handleChange} />
+
+            <button className="addbutton" onClick={this.handleAddTodoItem}>Lägg till</button>
+            
+            <ol>
+            {this.state.value.map((v) => {
+              return <li>
+                <h4 className="font">
+                  {v}
+                </h4>
+              </li>
+
+            })}
+            </ol>
+            
+           {/* DELMÅL SOM FUNGERAR!!! */}
            
            <br/>
            
-           <button disabled={this.state.doneButton}onClick={this.closePopup}>Klar</button>
-           
-           <p>PROVAR: </p>
-           <input placeholder='new data' onChange={
-           event => this.setState({goalDesc: event.target.value})}/>
+           <button disabled={this.state.doneButton} onClick={this.closePopup}>Klar</button>
+
+
+
            
            </div>
             

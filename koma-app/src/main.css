@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
 /***********
 *  APP.JS  *
 ***********/
@@ -198,7 +200,6 @@ ul {
     
 }
 
-<<<<<<< HEAD
 li {
     margin: 10px;
 }
@@ -223,4 +224,3 @@ li {
     color: #ff9900;
     font-size: 10vh;
 }
->>>>>>> febe498bcb6aba8666450f1ab0b9fe9b4043b356

@@ -121,5 +121,4 @@ const MainMenu = () => {
        );
      }
    }
-
    export default App;

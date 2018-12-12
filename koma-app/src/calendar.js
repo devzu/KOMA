@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Moment from 'react-moment';
+// WHAT IS THIS????
+///// |
+///// v
+//import Moment from 'react-moment';
+///// ^
+///// |
 import {Container, Row, Col} from 'reactstrap';
 import Calendar from 'react-calendar';
 import TipsPage from './tips';

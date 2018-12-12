@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
 /***********
 *  APP.JS  *
 ***********/
@@ -14,7 +16,7 @@
             }
 .mittenBox {
     display: absolute;
-    background-color:rgba(207, 226, 243, 0.4);
+    background-color:rgba(207, 226, 243);
     border-radius: 10px 10px 10px 10px;
     padding: 10px;
     width: 500px;
@@ -74,7 +76,7 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
 
 .Blue{
     display: absolute;
-    background-color:rgba(207, 226, 243, 0.4);
+    background-color:rgba(207, 226, 243);
     border-radius: 10px 10px 10px 10px;
     padding: 10px;
     /*opacity: 0.2;*/
@@ -127,14 +129,8 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
     position: absolute;
 }
 
-#progress_div {
-    position: relative;
-    background-color: #cfe2f3;
-    visibility: collapse;
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-gap: 10px;
-    grid-template-columns: auto auto;
+.progress_div {
+
 }
 
 #myProgress {
@@ -143,12 +139,12 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
     color: pink;
     width: 200px;
     height: 50px;
-    transform: rotate(-90deg);
+    
 }
 
 .add_button {
-    background-color: white;
-    color: #ff9900;
+    background-color: #ff9900;
+    color: white;
     font-size: 16px;
     border-radius: 10px;
 }
@@ -158,6 +154,13 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
     color: white;
     height: 20px;
     width: 10px;
+}
+
+#info_box {
+    background-color: #4a86e84b;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 progress[value]::-webkit-progress-bar {
@@ -171,19 +174,46 @@ progress[value]::-webkit-progress-value {
     background-size: 35px 20px, 100% 100%, 100% 100%;
     transition-duration: 2s;
     transition-timing-function: ease;
+
 }
 
-.popup_inner {
-    background: pink;
+.progress {
+    width: 300px;
+    height: 100px !important;
+    -webkit-transform: rotate(-90deg);
+    transform-origin: 200px 190px;
+}
+
+.pop_up {
+    background-color: #4a86e84b;
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
 }
 
-.popup_outer {
+input {
+    font-size: 10px;
+}
+
+ul {
+    list-style-type: none;
     
 }
 
+li {
+    margin: 10px;
+}
+
+.vertical {
+  display: inline-block;
+  width: 20%;
+  height: 40px;
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+
+}
+
+=======
 
 .navbar:before {
     content:none;

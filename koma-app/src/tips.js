@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './main.css';
+
+
 const TipsPage = () => ( 
     <div><Tips/></div>
 );
-
 
 class PopupVideo extends React.Component{
     
@@ -179,7 +180,7 @@ class ProdContent extends React.Component {
 }
 
 class Tips extends React.Component{
-
+    
     render(){
         return ( <div>
 
@@ -190,35 +191,57 @@ class Tips extends React.Component{
      No worries. Vi har samlat lite tips och tricks på studieteknik, som kanske kan hjälpa dig hålla fokus. 
      
  </p>
-
-    {/* ROW MENU BUTTONS WOOP WOOP */}
-    <div className="row">
-{/*                 
-                <div className="studieBarCol col"><button className="button">Videor</button></div>
-                <div className="studieBarCol col"><button className="button">Produktivitet</button></div>
-                <div className="studieBarCol col"><button className="button">Appar</button></div>
-                <div className="studieBarCol col"><button className="button">Hemsidor</button></div> */}
-                <div className=""><VideoContent/>
-                <ProdContent/></div>
-
-                    <div className="container"> 
-                        <div className="row">
-                            <div className="popup">
-                                <div classname="popup-inner">
-                                WITH THE WIND
-                                
-        
-          <PopupProd/>
-                                <button classname="button" onClick=""></button>
-                                </div>
+ 
+                
+                    <div> VIDEO </div>
+                          
+                        <a class="studie" href="https://www.youtube.com/watch?v=pZgMpjjgCRA">
+                            <div>
+                                Improving Cornell Notes With Sketchnoting Techniques
                             </div>
-                        </div> 
-                    </div>
-    </div>
-
-                        <div className="VideoDescText col"><h3>Lorem Ipsum</h3><p>Väldigt informativ video om Lorem Ipsum</p>
-                        </div> 
-
+                        </a>
+                        <a class="studie" href="https://www.youtube.com/watch?v=IlU-zDU6aQ0&t">
+                            <div>
+                                Study Less Study Smart
+                            </div>
+                        </a>
+                    
+                    <div> HEMSIDA </div>
+                        <a class="studie" href="https://collegeinfogeek.com/">
+                            <div>
+                                College info geek
+                            </div>
+                        </a>
+                        <a class="studie" href="https://www.uu.se/en/students/support-and-services/health-care/study-techniques/">
+                            <div>
+                                Find the study technique that works best for you
+                            </div>
+                        </a>
+                
+                        <a class="studie" href="https://www.oxfordlearning.com/how-to-study-effectively/">
+                            <div>
+                                How to study effectively
+                            </div>
+                        </a>
+                
+                    <div> BÖCKER </div>
+                        <a class="studie" href="https://www.adlibris.com/se/bok/plugga-smart-och-lar-dig-mer-9789144017259?gclid=Cj0KCQiA3b3gBRDAARIsAL6D-N8Ix2pjm2oJTAL1C8oHhxy5TCW8TR1fnTqlMM7voWIU3rfA-0WF4pgaAs9mEALw_wcB">
+                            <div>
+                               Plugga smart och lär dig mer!
+                            </div>
+                        </a>
+                        <a class="studie" href="https://www.bokus.com/bok/9780812981605/power-of-habit/">
+                            <div>
+                                Power Of Habit
+                            </div>
+                        </a>
+                    <div> APPAR </div>
+                        <a class="studie" href="https://www.forestapp.cc/en/">
+                            <div>
+                                Forest: Stay focused
+                            </div>
+                        </a>
+                    
                     </div>
                 </div>
 

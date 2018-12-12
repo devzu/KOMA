@@ -1,3 +1,4 @@
+
 // **----- DEL 1 -----**
 //IMPORTERA VIKTIGA SAKER
 
@@ -120,5 +121,4 @@ const MainMenu = () => {
        );
      }
    }
-
    export default App;

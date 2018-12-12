@@ -32,22 +32,17 @@ class ProfilePageContent extends React.Component {
         super(props);
         
         this.state = {
-            progressMax: 5,
+            progressMax: 0,
             progressCount: 0,
             
             showInstructions: false,
-            showCreate: false,
+            showCreate: false, 
             showProgress: false,
             
             doneButton: true,
             
             GRATTIS: '',
             goalName: 'VÄLKOMMEN',
-            goalDesc1: '',
-            goalDesc2: '',
-            goalDesc3: '',
-            goalDesc4: '',
-            goalDesc5: '',
             
             value: [],
             textvalue : "",
@@ -64,6 +59,7 @@ class ProfilePageContent extends React.Component {
         this.closePopup = this.closePopup.bind(this);
         this.handleAddTodoItem = this.handleAddTodoItem.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.incrementCounter = this.incrementCounter.bind(this);
         
     }
     
@@ -123,9 +119,13 @@ class ProfilePageContent extends React.Component {
 
         //Uppdaterar state i funktionen (annars funkade tydligen ingenting)
         this.setState(this.state);
-        this.setState({doneButton: false});
+        this.setState({
+            doneButton: false,
+            progressMax: this.state.progressMax + 1
+            });
 
     }
+
 
     // Räkna progress (progressCount)
     incrementCounter = () => {
@@ -133,11 +133,13 @@ class ProfilePageContent extends React.Component {
             progressCount: this.state.progressCount + 1
         });
         
+         /*
         if (this.state.progressCount == this.state.progressMax - 1) {
             this.setState({
                 GRATTIS: "GRATTIS!"
             });
-        }
+        }*/
+        
     }
     
     // Displaya antal delmål
@@ -147,7 +149,7 @@ class ProfilePageContent extends React.Component {
     ***********************/
     render() {
         
-        console.log('goalDesc ', this.state.goalDesc);
+       console.log('progMax: ', this.state.progressMax, 'progCount: ', this.state.progressCount);
         
        return(
         <div className="row">
@@ -218,7 +220,6 @@ class ProfilePageContent extends React.Component {
            <button disabled={this.state.doneButton} onClick={this.closePopup}>Klar</button>
 
 
-
            
            </div>
             
@@ -236,18 +237,15 @@ class ProfilePageContent extends React.Component {
 
         </div>
         
-        <div>
-            
-            <ul>
-                <h2><b>&nbsp;Mål:</b></h2>
-              {
-            Object.keys(this.state.goals).map(function(key) {
-                  return <li><input type="checkbox" onClick={this.incrementCounter}></input> &nbsp;{this.state.goals[key]}</li>
-                }.bind(this))
-              }
-            </ul>
+        <ul>
+            {this.state.value.map((v) => {
+              return <li>
+                  <input type="checkbox" onClick={this.incrementCounter}/>
+                  {v}
+                </li>
 
-        </div>
+            })}
+        </ul>
 
         </div>
        );

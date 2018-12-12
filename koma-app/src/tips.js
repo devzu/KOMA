@@ -72,7 +72,7 @@ class PopupProd extends React.Component{
             counter: this.state.counter +  1,
             enableButton: false
         });
-        // Kalla på crateField
+        // Kalla på createField
         this.createField(this);
         
     } 

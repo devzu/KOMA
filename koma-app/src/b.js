@@ -8,7 +8,6 @@ const HelloWorldText = () => (
  <div className="containWithStuff">
         <div className=" row" id="root">
 </div>
-
 <App/>
 
 
@@ -52,7 +51,6 @@ class App extends Component {
             const click2= this.state.viewContent2;
             const click3= this.state.viewContent3;
             const click4= this.state.viewContent4;
-                <div id=""> 
             if(click1) return  (<div className="container" id="">
             <div className="col-xl-11 self-align-center"><div className="row">
             <button className='button button1 col' onClick={this.handleClick1}>VIDEO</button>

@@ -18,32 +18,34 @@ import './main.css'
 // Konstanter-> Våra delar utav sidorna. Dessa "laddar vi in" när vi trycker på dem.
    const Startsida = () => (
      <div>
+       <h1 className="titleclass">Titel</h1>
        <ProfilePage/>
      </div>
    )
 
    const Knapp2 = () => (
-     <div>
+     <div><h1 className="titleclass">Titel</h1>
        <CalendarPage/>
      </div>
    )
 
    const Knapp3 = () => (
-     <TipsPage/>
+     <div><h1 className="titleclass">Titel</h1>
+     <TipsPage/></div>
    )
 
    const TestSida = () => (
-     <HelloWorldText/>
+     <div><h1 className="titleclass">Titel</h1>
+     <HelloWorldText/></div>
    )
 
 
 const MainMenu = () => {
  return (
    
-   <div className="navbar">
-          
+   <div className="navbar container">
      <div className="row"><Link to="/">
-     <button className="menubutton dissapear col"><span className="glyphicon glyphicon-stats dissapear"></span></button>
+     <button className="menubutton dissapear col self-align-center poop"><span className="glyphicon glyphicon-stats dissapear"></span></button>
      </Link></div> 
      
      <div className="row"><Link to="/knapp2">
@@ -76,7 +78,7 @@ const MainMenu = () => {
 
              {/* ////PART ONE//// */}
               {/* HEADER CLASSNAME START */}
-               <div className="App-header col-xl-1">
+               <div className="App-header col-1">
 
                  {/* LOGO */}
                    <Link to="/TestSida"><div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div></Link>

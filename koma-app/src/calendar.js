@@ -7,7 +7,7 @@ import TipsPage from './tips';
 import './main.css';
 
 const CalendarPage = () => ( 
- <div className="">
+ <div className=""> 
  <Container><Row><Col xl="3"><div class="Blue"><Deadlines/></div></Col><Col xl="6"><div class="Blue"><Kalender/></div></Col></Row></Container>
 </div>
 

@@ -7,7 +7,177 @@ const TipsPage = () => (
     <div><Tips/></div>
 );
 
+class PopupVideo extends React.Component{
+    
+    // Initial states of Popup:
+    // Nollan counter, inga textfält (goalFields)
+    state = {
+        counter: 0,
+        enableButton: true,
+        goalFields: []
+    };
+    
+    // Arrow function
+    addGoal = () => {
+        // Plussa på countern
+        this.setState({ 
+            counter: this.state.counter +  1,
+            enableButton: false
+        });
+        // Kalla på createField
+        this.createField(this);
+        
+    } 
+    
+    render() {
+    {/**/}
+        return (
+          <div className='popup'>
+            <div className='popup_inner'>
 
+                 {/* CONTAINMENT WITH VIDEOS AND STUFF */}
+    <div className="videosContainer">
+        <div className="VideoBox row">  <div className="col">
+        <iframe title="fuckIt" className="WhatEverBro" width="560" height="315" src="https://www.youtube.com/embed/aVS4W7GZSq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div className="VideoDescText col"><h3>Lorem Ipsum</h3><p>Väldigt informativ video om Lorem Ipsum</p></div> </div>
+    </div>
+
+                
+
+                <button 
+                onClick={this.props.closePopup}>KLAR</button>
+            
+            </div>
+          </div>
+
+        );
+  }
+ 
+
+}
+
+class PopupProd extends React.Component{
+    
+    // Initial states of Popup:
+    // Nollan counter, inga textfält (goalFields)
+    state = {
+        counter: 0,
+        enableButton: true,
+        goalFields: []
+    };
+    
+    // Arrow function
+    addGoal = () => {
+        // Plussa på countern
+        this.setState({ 
+            counter: this.state.counter +  1,
+            enableButton: false
+        });
+        // Kalla på createField
+        this.createField(this);
+        
+    } 
+    
+    render() {
+    {/**/}
+        return (
+          <div className='popup'>
+            <div className='popup_inner'>
+
+                 {/* CONTAINMENT WITH VIDEOS AND STUFF */}
+    <div className="videosContainer">
+        ROLL THE DICE
+    </div>
+
+                
+
+                <button 
+                onClick={this.props.closePopup}>KLAR</button>
+            
+            </div>
+          </div>
+
+        );
+  }
+ 
+
+}
+
+
+class VideoContent extends React.Component {
+    
+  constructor() {
+    super();
+    this.state = {
+      showPopup: false
+    };
+  }
+    
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
+    
+  render() {
+    return (
+      <div className="col">
+        <button onClick={this.togglePopup.bind(this)} className="button">
+            En knapp
+        </button>
+        
+        {/* Se detta som en if-sats:
+        // om showPopup == true, gör det som syns: 
+        // Annars, gör ingenting (null)*/}
+        {this.state.showPopup ? 
+          <PopupVideo
+            closePopup={this.togglePopup.bind(this)} 
+          />
+          : null
+        }
+
+      </div>
+    );
+  }
+}
+
+
+class ProdContent extends React.Component {
+    
+  constructor() {
+    super();
+    this.state = {
+      showPopup: false
+    };
+  }
+    
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
+    
+  render() {
+    return (
+      <div className="col">
+        <button onClick={this.togglePopup.bind(this)} className="button">
+            Två knapp
+        </button>
+        
+        {/* Se detta som en if-sats:
+        // om showPopup == true, gör det som syns: 
+        // Annars, gör ingenting (null)*/}
+        {this.state.showPopup ? 
+          <PopupProd
+            closePopup={this.togglePopup.bind(this)} 
+          />
+          : null
+        }
+
+      </div>
+    );
+  }
+}
 
 class Tips extends React.Component{
     

@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import './main.css';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import ReactDOM from 'react-dom';
+import './main.css';
 
 const HelloWorldText = () => ( 
- <div className="containWithStuff">jhbjhbj
-        <div className="">
-fuck it all magna melius eos eu. Et mea lobortis suscipiantur, ignota consequat conceptam sit ei. Vidit omnes his et. Cu ferri euismod corpora cum. </div>
-
+ <div className="containWithStuff">
+        <div className=" row" id="root">
+</div>
 <App/>
 
 
@@ -17,7 +18,9 @@ fuck it all magna melius eos eu. Et mea lobortis suscipiantur, ignota consequat 
 class App extends Component {
         constructor() {
             super();
+            this.handleClick1 = this.handleClick1.bind(this);
             this.state = {
+                    
                 viewContent1: false,
                 viewContent2: false,
                 viewContent3: false,
@@ -26,7 +29,7 @@ class App extends Component {
             }
         }
     
-        handleClick1 = (button) => {
+        handleClick1 = () => {
             this.setState({ viewContent1: true, viewContent2: false, viewContent3: false, viewContent4: false })
         }
 
@@ -42,26 +45,85 @@ class App extends Component {
                 this.setState({ viewContent1: false, viewContent2: false, viewContent3: false, viewContent4: true  })
             }
         
-        
     
         render() {
-            if(this.state.viewContent1 === true) return  (
-                <div > 
-                        DU TRYCKTE PÅ KNAPP 1!!!
-                <button className='button button1' onClick={() => this.handleClick1}> BUTTON 1</button>
-                <button className='button button2' onClick={() => this.handleClick2}> BUTTON 2</button>
-                <button className='button button3' onClick={() => this.handleClick3}> BUTTON 3</button>
-                <button className='button button3' onClick={() => this.handleClick4}> BUTTON 4</button>
-                AAJNSJHSNJHDBDJH
-                </div>)
-        else return (<div>
-        <button className='button button1' onClick={() => this.handleClick1}> BUTTON 1</button>
-        {/* <button className='button button2' onClick={() => this.handleClick2}> BUTTON 2</button>
-        <button className='button button3' onClick={() => this.handleClick3}> BUTTON 3</button>
-        <button className='button button3' onClick={() => this.handleClick4}> BUTTON 4</button> */}
-        <br/>okej försök trycka nu då
-        </div>)
+            const click1= this.state.viewContent1;
+            const click2= this.state.viewContent2;
+            const click3= this.state.viewContent3;
+            const click4= this.state.viewContent4;
+            if(click1) return  (<div className="container" id="">
+            <div className="col-xl-11 self-align-center"><div className="row">
+            <button className='button button1 col' onClick={this.handleClick1}>VIDEO</button>
+                    <button className='button button2 col' onClick={this.handleClick2}> HEMSIDA</button>
+                    <button className='button button3 col' onClick={this.handleClick3}> BÖCKER</button>
+                    <button className='button button3 col' onClick={this.handleClick4}> APPAR</button>
+            <br/>
+            </div></div></div>)
+                else if (click2) return ( 
+                        <div className="container" id="">
+        <div className="col-xl-11 self-align-center"><div className="row">
+        <button className='button button1 col' onClick={this.handleClick1}>VIDEO</button>
+                <button className='button button2 col' onClick={this.handleClick2}> HEMSIDA</button>
+                <button className='button button3 col' onClick={this.handleClick3}> BÖCKER</button>
+                <button className='button button3 col' onClick={this.handleClick4}> APPAR</button>
+        <br/>
+        </div></div></div>
+                )
+                  else if (click3) return (<div className="container" id="">
+                  <div className="col-xl-11 self-align-center"><div className="row">
+                  <button className='button button1 col' onClick={this.handleClick1}>VIDEO</button>
+                          <button className='button button2 col' onClick={this.handleClick2}> HEMSIDA</button>
+                          <button className='button button3 col' onClick={this.handleClick3}> BÖCKER</button>
+                          <button className='button button3 col' onClick={this.handleClick4}> APPAR</button>
+                  <br/>
+                  </div></div></div>)
+                  else if (click4) return (
+                        <div className="container" id="">
+                        <div className="col-xl-11 self-align-center"><div className="row">
+                        <button className='button button1 col' onClick={this.handleClick1}>VIDEO</button>
+                                <button className='button button2 col' onClick={this.handleClick2}> HEMSIDA</button>
+                                <button className='button button3 col' onClick={this.handleClick3}> BÖCKER</button>
+                                <button className='button button3 col' onClick={this.handleClick4}> APPAR</button>
+                        <br/>
+                        </div></div></div>
+                  )
+
+        else return (<div className="container boxContent" id="">
+        <div className="col-xl-11 self-align-center"><div className="row">
+        <button className='button button1 col' onClick={this.handleClick1}>VIDEO</button>
+                <button className='button button2 col' onClick={this.handleClick2}> HEMSIDA</button>
+                <button className='button button3 col' onClick={this.handleClick3}> BÖCKER</button>
+                <button className='button button3 col' onClick={this.handleClick4}> APPAR</button>
+        <br/>
+        </div></div>
+        <div className="container"><div className="row"><div className="col-xl-11 self-align-center Blue">
+        
+        <div className="videosContainer">
+        <div className="VideoBox row">  <div className="col">
+        <iframe title="fuckIt" className="WhatEverBro" width="426" height="240" src="https://www.youtube.com/embed/aVS4W7GZSq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div className="VideoDescText col"><h3>Lorem Ipsum</h3><p>Väldigt informativ video om Lorem Ipsum</p></div> </div>
+    </div> <hr/>
+
+    <div className="videosContainer">
+        <div className="VideoBox row">  <div className="col">
+        <iframe title="fuckIt" className="WhatEverBro" width="426" height="240" src="https://www.youtube.com/embed/aVS4W7GZSq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div className="VideoDescText col"><h3>Lorem Ipsum</h3><p>Väldigt informativ video om Lorem Ipsum</p></div> </div>
+    </div> <hr/>
+
+    <div className="videosContainer">
+        <div className="VideoBox row">  <div className="col">
+        <iframe title="fuckIt" className="WhatEverBro" width="426" height="240" src="https://www.youtube.com/embed/aVS4W7GZSq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div className="VideoDescText col"><h3>Lorem Ipsum</h3><p>Väldigt informativ video om Lorem Ipsum</p></div> </div>
+    </div> <hr/>
+
+    
+    
+    </div></div></div></div>
+        )
         }
+
+        
 }
+ReactDOM.render(<App />, document.getElementById('root'));
 
 export default HelloWorldText;

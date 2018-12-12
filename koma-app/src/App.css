@@ -15,10 +15,10 @@ body {
   text-align: left;
 font-family: 'Didact Gothic', sans-serif;
   display: absolute;
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100%;
     margin: 1vw;
-    
+    overflow-y: auto;
 }
 
 
@@ -100,8 +100,9 @@ font-family: 'Didact Gothic', sans-serif;
 .ContentanAvTentan {
 
   display: grid;
-  margin-top: 30px;
+  margin-top: 0px;
   padding: 5px;
+
 
 }
 .App-header {

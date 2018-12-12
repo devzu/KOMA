@@ -81,10 +81,9 @@ const MainMenu = () => {
                {/* HEADER CLASSNAME START */}
                 <div className="App-header col-xl-1">
 
-                  {/* LOGO */}
-                    <div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div>
-                  {/* END LOGO */}
-
+  {/* LOGO */}
+                    <Link to="/TestSida"><div className="Bild"><img src={logo} className="App-logo" alt="logo" /></div></Link>
+                 {/* END LOGO */}
                   {/* MAINMENU FUNCTION */}
                     <MainMenu />
                   {/* END MAINMENU FUNCTION */}

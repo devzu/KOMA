@@ -9,7 +9,7 @@ import './main.css';
 ******************************/
 const ProfilePage = () => ( 
 <div className="containWithStuff">
-    <div className="mittenBox">
+    <div className="Blue col-10">
     
     <ProfilePageContent/>
     
@@ -73,7 +73,8 @@ class ProfilePageContent extends React.Component {
     // Toggla popup/progress (showCreate & showProgress)
     openPopup = () => {
         this.setState({
-            showPopup: true
+            showPopup: true,
+            showInstructions: false
         });
     }
     
@@ -149,120 +150,101 @@ class ProfilePageContent extends React.Component {
     ***********************/
     render() {
         
-       console.log('progMax: ', this.state.progressMax, 'progCount: ', this.state.progressCount);
-        
        return(
-        <div className="row">
-           
-        <div className="col-8">
-        
-        <h1>{this.state.goalName}</h1>
-        
-           <br/>
-           
+<div className="row">
+
+    <div className="col-8">
+
         {/* KNAPPAR! */}
-        <button className="add_button" onClick={this.toggleInfo}>
-           INFO
+        <button className="mybutton" onClick={this.toggleInfo}>
+        INFO
         </button> 
-           
-        <button onClick={this.openPopup} className="add_button">
-           <b>+</b>
+
+        <button onClick={this.openPopup} className="mybutton">
+        <b>+</b>
         </button>
-           
-           {/* INFOBOX */}
+
+        {/* INFOBOX */}
         { this.state.showInstructions ?
-           <div id="info_box">
-           <b>Information:</b> <br/>
-           Den här textlådan ska visas om det är så att användaren inte har gjort ngt mål förut, för att instruera hur man gör ett mål. I slutet ska den instruera till att man kan tryckapå plusknappen för att gå vidare.
-           Rent krasst för dig så behöver du ha en bool som börjar som falsk och sen bara blir sann för resten av tiden! Puss å kram, du klarar detta...
-           </div>
-           
-           : null
+        <div id="info_box">
+        <b>Information:</b> <br/>
+        Den här textlådan ska visas om det är så att användaren inte har gjort ngt mål förut, för att instruera hur man gör ett mål. I slutet ska den instruera till att man kan trycka på plusknappen för att gå vidare.
+        Rent krasst för dig så behöver du ha en bool som börjar som falsk och sen bara blir sann för resten av tiden! Puss å kram, du klarar detta...
+    </div>
+
+        : null
         }
-           
-           
-           {/* POP UP */}
-        { this.state.showPopup ?
-           <div className="pop_up" >
-           
-           <button onClick={this.closePopup}>
-           X
-           </button>
-           
-           <h2>Namn på mål:</h2>
-           <input type="text"></input>
-               
-           <br/>
-           
-           {/* DELMÅL SOM FUNGERAR!!! */}
-               
-           <h2>Delmål:</h2>
-               
-            <input type="text" placeholder="Skriv ditt delmål här" className="text" onChange={this.handleChange} />
-
-            <button className="addbutton" onClick={this.handleAddTodoItem}>Lägg till</button>
-            
-            <ol>
-            {this.state.value.map((v) => {
-              return <li>
-                <h4 className="font">
-                  {v}
-                </h4>
-              </li>
-
-            })}
-            </ol>
-            
-           {/* DELMÅL SOM FUNGERAR!!! */}
-           
-           <br/>
-           
-           <button disabled={this.state.doneButton} onClick={this.closePopup}>Klar</button>
 
 
-           
-           </div>
-            
-            : null
-        }
-        
+    {/* POP UP */}
+    { this.state.showPopup ?
+    <div className="pop_up" >
+
+    <h2>Namn på mål:</h2>
+    <input type="text"></input>
+
+    <br/>
+
+    {/* DELMÅL SOM FUNGERAR!!! */}
+
+    <h2>Delmål:</h2>
+
+    <input size="50" type="text" placeholder="Skriv ditt delmål här" className="text" onChange={this.handleChange} />
+
+    <button className="mybutton" onClick={this.handleAddTodoItem}>Lägg till</button>
+
+    <ol>
+    {this.state.value.map((v) => {
+    return <li>
+    <h4 className="font">
+      {v}
+    </h4>
+    </li>
+
+    })}
+    </ol>
+
+    {/* DELMÅL SOM FUNGERAR!!! */}
+
+    <br/>
+
+    <button className="mybutton" disabled={this.state.doneButton} onClick={this.closePopup}>Klar</button>
+
+</div>
+
+: 
+
+<div className="row">
+    <div className=".col-6 .col-md-4">
+
+        <div>
+        <progress className="progress progress_vertical" value={this.state.progressCount} max={this.state.progressMax}>
+        </progress>
         </div>
-        
-        <div className="col-4">
-            {/* PROGRESS */}
-            <div>
-                <progress className="progress progress_vertical" value={this.state.progressCount} max={this.state.progressMax}>
-                </progress>
-            </div>
 
-        </div>
-        
+    </div>
+    <div className=".col-12 .col-md-8">
         <ul>
             {this.state.value.map((v) => {
-              return <li>
-                  <input type="checkbox" onClick={this.incrementCounter}/>
-                  {v}
-                </li>
+            return <li>
+              <input type="checkbox" onClick={this.incrementCounter}/>
+              {v}
+            </li>
 
             })}
         </ul>
+    </div>
 
-        </div>
+</div>
+}
+
+</div>
+
+
+</div>
        );
    }
    
 }
-
-/*
-           <form onSubmit={this.createGoal}>
-               <h2>Namn på mål:</h2>
-               <input type="text"></input>
-               <br/>
-               <h2>Delmål:</h2>
-               <input type="text"></input>
-               <br/>
-                <button type="submit"> KLAR</button>
-           </form>
-*/
 
 export default ProfilePage;

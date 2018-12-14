@@ -113,7 +113,15 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
  }
  .WhatEverBro{
      margin: 1vw;
+
  }
+
+ .WhatEverBrosephine{
+    margin: 1vw;
+    margin-left: 5vw;
+    max-width: 350px;
+
+}
 
 /*******************
 * FÖR PROFILE PAGE *
@@ -213,8 +221,6 @@ li {
   transform: rotate(-90deg);
 
 }
-
-=======
 
 .navbar:before {
     content:none;

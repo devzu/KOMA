@@ -1,10 +1,24 @@
 /* APP.CSS is only for the APP-SHELL, not for the seperate pages imported into the app.*/
 @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Black+And+White+Picture');
 body {
-    font-family: 'Black And White Picture', sans-serif;
+
     overflow: hidden;
     color: black;
 }
+
+a {
+  text-decoration: none!important;
+    overflow: hidden;
+    color: black!important;
+
+}
+a :hover {
+  text-decoration: none!important;
+    overflow: hidden;
+    color: darkslategrey!important;
+
+}
+
 .no-gutter > [class*='col-'] {
   padding-right:0;
   padding-left:0;

@@ -19,24 +19,24 @@ import './main.css'
 // Konstanter-> Våra delar utav sidorna. Dessa "laddar vi in" när vi trycker på dem.
    const Startsida = () => (
      <div>
-       <h1 className="titleclass">Titel</h1>
+       <h1 className="titleclass"><b>Dina mål</b></h1>
        <ProfilePage/>
      </div>
    )
 
    const Knapp2 = () => (
-     <div><h1 className="titleclass">Titel</h1>
+     <div><h1 className="titleclass"><b>Kalender</b></h1>
        <CalendarPage/>
      </div>
    )
 
    const Knapp3 = () => (
-     <div><h1 className="titleclass">Titel</h1>
+     <div><h1 className="titleclass"><b>Studietips</b></h1>
      <TipsPage/></div>
    )
 
    const TestSida = () => (
-     <div><h1 className="titleclass">Titel</h1>
+     <div><h1 className="titleclass"><b>Välkommen Användare</b></h1>
      <HelloWorldText/></div>
    )
 

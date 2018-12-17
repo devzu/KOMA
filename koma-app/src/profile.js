@@ -122,13 +122,12 @@ class ProfilePageContent extends React.Component {
         this.setState(this.state);
         this.setState({
             doneButton: false,
-            progressMax: this.state.progressMax + 1
+            progressMax: this.state.progressMax + 1,
+            showProgress: true
             });
 
     }
 
-
-    // Räkna progress (progressCount)
     incrementCounter = () => {
         this.setState({
             progressCount: this.state.progressCount + 1
@@ -181,7 +180,7 @@ class ProfilePageContent extends React.Component {
     <div className="pop_up" >
 
     <h2>Namn på mål:</h2>
-    <input type="text"></input>
+    <input type="text" placeholder="Skriv mål här" onChange={this.handleChange}/>
 
     <br/>
 
@@ -204,16 +203,16 @@ class ProfilePageContent extends React.Component {
     })}
     </ol>
 
-    {/* DELMÅL SOM FUNGERAR!!! */}
-
     <br/>
 
     <button className="mybutton" disabled={this.state.doneButton} onClick={this.closePopup}>Klar</button>
 
 </div>
 
-: 
+: null}
 
+    {/* VISA PROGRESSBAREN */}
+    { !this.state.showInstructions && !this.state.showPopup && this.state.showProgress ?
 <div className="row">
     <div className=".col-6 .col-md-4">
 
@@ -236,7 +235,17 @@ class ProfilePageContent extends React.Component {
     </div>
 
 </div>
-}
+    : null}
+
+
+    {/* VISA MEDDELANDE OM DET INTE FINNS NGT CONTENT PÅ SIDAN */}
+    {!this.state.showInstructions && !this.state.showPopup && !this.state.showProgress ?
+        <div>
+        <h1 className="no_content"><b>Inga mål!</b></h1>
+        <h3 className="no_content"><em>Tryck på '+' för att skapa ett nytt mål.</em></h3>
+        </div>
+    : null}
+
 
 </div>
 

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom';
 import './main.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const HelloWorldText = () => ( 
  <div className="containWithStuff">
@@ -15,6 +16,75 @@ const HelloWorldText = () => (
 
 );
 
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+            
+        };
+    }
+    
+    render() {
+        return (
+      
+        <div className="Blue">
+            
+            <div>
+            
+            <h1 className="center_align"><b>Vad vill du göra?</b></h1>
+            
+                <div className="container">
+                    
+                    {/* IKONERNA */}
+                    <div className="row">
+                        <div className="col-sm center_align">
+                            <span className="glyphicon glyphicon-stats dissapear"></span>
+                        </div>
+                        <div className="col-sm center_align">
+                            <span className="glyphicon glyphicon-calendar dissapear"></span>
+                        </div>
+                        <div className="col-sm center_align">  
+                            <span className="glyphicon glyphicon-education dissapear"></span>
+                        </div>
+                    </div>   
+                    
+                    {/* BESKRIVNINGAR */}
+                    <div className="row">
+                        <div className="col-sm center_align">
+                            <em>Tracka mina mål</em>
+                            <br/>
+                            <button className="mybutton">
+                                INFO
+                            </button> 
+                        </div>
+                        <div className="col-sm center_align">
+                            <em>Kolla min kalender</em>
+                            <br/>
+                            <button className="mybutton">
+                                INFO
+                            </button>
+                        </div>
+                        <div className="col-sm center_align">  
+                            <em>Bli studiemotiverad</em>
+                            <br/>
+                            <button className="mybutton">
+                                INFO
+                            </button>
+                        </div>
+                    </div>
+        
+            
+            
+                </div>
+            
+            </div>
+        </div>
+        
+        );
+    }
+}
+/*
 class App extends Component {
         constructor() {
             super();
@@ -59,7 +129,8 @@ class App extends Component {
                     <button className='button button3 col' onClick={this.handleClick4}> APPAR</button>
             <br/>
             </div></div></div>)
-                else if (click2) return ( 
+                else if (click2) 
+                return ( 
                         <div className="container" id="">
         <div className="col-xl-11 self-align-center"><div className="row">
         <button className='button button1 col' onClick={this.handleClick1}>VIDEO</button>
@@ -124,6 +195,8 @@ class App extends Component {
 
         
 }
+*/
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 export default HelloWorldText;

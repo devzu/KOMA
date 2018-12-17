@@ -10,6 +10,7 @@ a {
   text-decoration: none!important;
     overflow: hidden;
     color: black!important;
+    outline: 0;
 
 }
 a :hover {
@@ -109,6 +110,10 @@ font-family: 'Didact Gothic', sans-serif;
         position:relative;
         top:1px;
         background-color: green;
+    }
+
+    .menuButton:focus {
+        outline:0;
     }
 
 .ContentanAvTentan {

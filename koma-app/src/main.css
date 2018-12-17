@@ -14,17 +14,7 @@
     font-family: 'Didact Gothic', sans-serif;
     text-align: center;
             }
-.mittenBox {
-    display: absolute;
-    background-color: #cfe2f3;
-    border-radius: 10px 10px 10px 10px;
-    padding: 10px;
-    width: 500px;
-    height: 500px;
-    /*opacity: 0.2;*/
-    z-index: 1;
 
-}
 .containerBox{
 }
 
@@ -75,6 +65,10 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
 	top:1px;
 }
 
+.button:focus {
+    outline:0;
+}
+
 .button:disabled {
     background: lightgray;
     border: none;
@@ -103,9 +97,11 @@ GREJS FÖR ALLA HEJSAN HOPPSAN
     padding: 10px;
     /*opacity: 0.2;*/
     z-index: 1;
-    max-height: 75vh;
+    min-width: 500px;
+    max-width: 75vw;
     overflow-y: auto;
     min-height: 500px!important;
+    max-height: 75vh;
 }
         
 /**************
@@ -211,6 +207,7 @@ progress[value]::-webkit-progress-value {
 
 .progress {
     width: 300px;
+    background-color: #8DB4EE;
     height: 100px !important;
     -webkit-transform: rotate(-90deg);
     transform-origin: 200px 120px;
@@ -237,11 +234,12 @@ li {
 }
 
 .vertical {
-  display: inline-block;
-  width: 20%;
-  height: 40px;
-  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-  transform: rotate(-90deg);
+    display: inline-block;
+    background-color: #8DB4EE;
+    width: 20%;
+    height: 40px;
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
 
 }
 
@@ -300,4 +298,18 @@ li {
     text-shadow: none;
     color: gray;
 }
+.mybutton:focus {
+    outline:0;
+}
 
+.no_content {
+    text-align: center;
+    color: gray;
+    font-size: 50px;
+}
+
+.center_align {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
